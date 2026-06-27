@@ -202,16 +202,25 @@
             background-color: #001a2c;
         }
 
-        /* BOTÓN DORADO PRINCIPAL */
+        /* CONTENEDOR Y ESTILOS DE LOS BOTONES DE ACCIÓN */
+        .cta-container {
+            text-align: center;
+            margin-top: 45px; 
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* Para que en celulares se acomoden uno abajo del otro */
+        }
         .btn-cta {
             display: inline-block; 
-            padding: 14px 40px; 
-            background-color: #c5a059; 
+            padding: 14px 35px; 
+            background-color: #c5a059; /* Dorado */
             color: #ffffff; 
             text-decoration: none; 
             border-radius: 6px; 
             font-weight: bold; 
-            font-size: 18px; 
+            font-size: 17px; 
             letter-spacing: 0.5px;
             box-shadow: 0 4px 10px rgba(197, 160, 89, 0.25);
             transition: all 0.3s ease;
@@ -221,10 +230,13 @@
             box-shadow: 0 6px 15px rgba(197, 160, 89, 0.35);
             transform: translateY(-1px);
         }
-        .cta-container {
-            text-align: center;
-            margin-top: 45px; 
-            margin-bottom: 15px;
+        .btn-secondary {
+            background-color: #002b49; /* Azul Marino */
+            box-shadow: 0 4px 10px rgba(0, 43, 73, 0.25);
+        }
+        .btn-secondary:hover {
+            background-color: #001a2c;
+            box-shadow: 0 6px 15px rgba(0, 43, 73, 0.35);
         }
     </style>
 </head>
@@ -313,10 +325,13 @@
             </div>
         </details>
 
-        <!-- Botón de Enlace de Acción Principal -->
+        <!-- DOS BOTONES DE ENLACE PRINCIPALES -->
         <div class="cta-container">
             <a href="contacto.html" class="btn-cta">
                 Solicitar una Asesoría
+            </a>
+            <a href="cursos.html" class="btn-cta btn-secondary">
+                Ver Cursos y Capacitaciones
             </a>
         </div>
 
