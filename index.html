@@ -7,7 +7,6 @@
     <style>
         body { 
             font-family: 'Georgia', serif; 
-            /* TEXTURA DE MADERA */
             background-color: #3d2314; 
             background-image: 
                 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
@@ -22,12 +21,11 @@
             max-width: 800px; 
             margin: 50px auto; 
             padding: 40px; 
-            background-color: #fcfaf2; /* Tono Crema / Marfil */
+            background-color: #fcfaf2; 
             border-radius: 12px; 
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
         }
         
-        /* DISEÑO DE ENCABEZADO */
         .header-section {
             text-align: left; 
             margin-bottom: 40px;
@@ -61,7 +59,6 @@
             margin-bottom: 40px;
         }
         
-        /* PESTAÑAS DESPLEGABLES CON MOVIMIENTO MEJORADO */
         details {
             background-color: #ffffff; 
             border: 1px solid #e2e8f0;
@@ -69,10 +66,10 @@
             margin-bottom: 15px;
             padding: 18px;
             text-align: left;
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Curva premium de movimiento */
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
         details:hover {
-            transform: translateY(-2px); /* Flota levemente al pasar el cursor */
+            transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
         details[open] {
@@ -92,27 +89,26 @@
             align-items: center;
         }
         summary::-webkit-details-marker {
-            display: none; /* Quita flecha nativa en algunos navegadores */
+            display: none;
         }
         summary::after {
             content: "➕";
             font-size: 13px;
             color: #c5a059;
-            transition: transform 0.4s ease; /* Movimiento de rotación */
+            transition: transform 0.4s ease;
         }
         details[open] summary::after {
-            transform: rotate(180deg); /* Gira elegantemente al abrir */
+            transform: rotate(180deg);
             content: "➖";
         }
 
-        /* ANIMACIÓN DE ENTRADA SUAVE PARA EL CONTENIDO */
         .content {
             margin-top: 15px;
             font-size: 16px;
             color: #4a5568;
-            line-height: 1.7;
+            line-height: 1.8;
             text-align: justify;
-            animation: fadelnSuave 0.5s ease-out forwards; /* Entrada fluida */
+            animation: fadelnSuave 0.5s ease-out forwards;
         }
         @keyframes fadelnSuave {
             from { opacity: 0; transform: translateY(-8px); }
@@ -136,7 +132,21 @@
             color: #3182ce;
         }
 
-        /* SECCIÓN DE TESTIMONIOS CON EFECTO DE ELEVACIÓN */
+        .profile-title {
+            color: #002b49;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .profile-subtitle {
+            color: #c5a059;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
         .section-title {
             color: #002b49;
             font-size: 24px;
@@ -158,7 +168,7 @@
             transition: all 0.3s ease;
         }
         .testimonial-card:hover {
-            transform: scale(1.01) translateX(3px); /* Se desplaza e infla un milímetro */
+            transform: scale(1.01) translateX(3px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
         .stars {
@@ -179,7 +189,6 @@
             font-size: 14px;
         }
 
-        /* FORMULARIO DE OPINIONES */
         .review-form {
             background-color: transparent; 
             border: none; 
@@ -207,7 +216,7 @@
         }
         .form-input:focus {
             outline: none;
-            border-color: #c5a059; /* Al escribir, el borde se ilumina en dorado */
+            border-color: #c5a059;
         }
         .btn-review {
             background-color: #002b49;
@@ -224,7 +233,6 @@
             transform: translateY(-1px);
         }
 
-        /* BOTONES PRINCIPALES: RESPONSIVOS Y CON FLOTACIÓN DINÁMICA */
         .cta-container {
             text-align: center;
             margin-top: 45px; 
@@ -250,7 +258,7 @@
         .btn-cta:hover {
             background-color: #aa8643; 
             box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
-            transform: translateY(-3px); /* Flotación elegante hacia arriba */
+            transform: translateY(-3px);
         }
         .btn-secondary {
             background-color: #002b49; 
@@ -266,7 +274,6 @@
 
     <div class="container">
         
-        <!-- ENCABEZADO -->
         <div class="header-section">
             <img src="Logo 1.png" alt="Logo de Consultoría Integral" class="logo">
             <h1>Consultoría Integral Empresarial</h1>
@@ -330,7 +337,27 @@
             </div>
         </details>
 
-        <!-- TRES BOTONES DE ENLACE PRINCIPALES -->
+        <!-- SECCIÓN 5: LIDERAZGO ESTRATÉGICO -->
+        <details>
+            <summary>Liderazgo Estratégico</summary>
+            <div class="content">
+                <div class="profile-title">Fernando Ramírez Martínez</div>
+                <div class="profile-subtitle">Director General &amp; Consultor Patrimonial</div>
+                <p>Con más de 8 años de trayectoria liderando estrategias financieras y corporativas, fundé este espacio bajo una premisa inquebrantable: los mejores negocios y patrimonios no se administran solo con números, sino con decisiones inteligentes, visión preventiva y absoluta confianza.</p>
+                <p>Mi enfoque se centra en transformar la complejidad contable y fiscal en planes de crecimiento claros, sólidos y completamente blindados para empresarios y emprendedores que buscan trascender con seguridad.</p>
+            </div>
+        </details>
+
+        <!-- SECCIÓN 6: NUESTRO EQUIPO -->
+        <details>
+            <summary>Te Presento al Equipo</summary>
+            <div class="content">
+                <h3>El valor de la especialización</h3>
+                <p>Detrás de cada estrategia exitosa hay un equipo multidisciplinario firmemente comprometido con tus objetivos. Contamos con especialistas de alto nivel en las áreas contable, fiscal, financiera y jurídica.</p>
+                <p>Nuestra sinergia nos permite analizar tu negocio desde todas las perspectivas posibles, anticipando riesgos regulatorios y optimizando tus recursos con la ética, innovación y cercanía que nos caracteriza.</p>
+            </div>
+        </details>
+
         <div class="cta-container">
             <a href="contacto.html" class="btn-cta">
                 Solicitar una Asesoría
@@ -343,7 +370,6 @@
             </a>
         </div>
 
-        <!-- SECCIÓN: TESTIMONIOS -->
         <div class="section-title">La voz de quienes confían en nosotros</div>
 
         <div class="testimonial-card">
@@ -358,7 +384,6 @@
             <div class="testimonial-author">— Emprendedora, Servicios Tecnológicos</div>
         </div>
 
-        <!-- BUZÓN PARA RECIBIR NUEVAS RESEÑAS -->
         <div class="review-form">
             <h4>Comparta su experiencia con nosotros</h4>
             <form action="#" method="POST">
