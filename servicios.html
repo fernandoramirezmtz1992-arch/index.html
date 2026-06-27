@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios - Consultoría Integral</title>
+    <style>
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: #3d2314; 
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px),
+                linear-gradient(90deg, #4a2c1b, #351e11);
+            background-size: 4px 100%, 100% 20px, 100% 100%;
+            margin: 0; 
+            padding: 0; 
+            color: #2d3748; 
+        }
+        .container {
+            max-width: 800px; 
+            margin: 50px auto; 
+            padding: 40px; 
+            background-color: #fcfaf2; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
+        }
+        .header-section {
+            text-align: left; 
+            margin-bottom: 35px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+        h1 { 
+            color: #002b49; 
+            font-size: 32px;
+            margin: 0 0 5px 0;
+        }
+        .subtitle {
+            color: #c5a059; 
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .intro-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #4a5568;
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+        
+        /* Acordeones */
+        details {
+            background-color: #ffffff; 
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 18px;
+            text-align: left;
+        }
+        details[open] {
+            border-color: #c5a059; 
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.1);
+        }
+        summary {
+            font-size: 19px;
+            font-weight: bold;
+            color: #002b49; 
+            cursor: pointer;
+            outline: none;
+            list-style: none; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::after {
+            content: "➕";
+            font-size: 13px;
+            color: #c5a059;
+        }
+        details[open] summary::after {
+            content: "➖";
+        }
+        .content {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+        .content h4 {
+            color: #002b49;
+            margin: 20px 0 10px 0;
+            font-size: 18px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 5px;
+        }
+        .content ul {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        /* Botón de regreso */
+        .btn-back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #002b49;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .btn-back:hover {
+            color: #c5a059;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header-section">
+            <h1>Nuestros Servicios</h1>
+            <div class="subtitle">Soluciones diseñadas para brindar seguridad y cumplimiento.</div>
+        </div>
+
+        <p class="intro-text">
+            Cada empresa enfrenta retos diferentes. Por eso ofrecemos soluciones personalizadas que van más allá del cumplimiento ordinario, ayudando a proteger tu patrimonio y optimizar tus recursos estratégicamente. Despliega cada categoría para conocer los servicios específicos y nuestros procesos de trabajo.
+        </p>
+
+        <!-- SERVICIO 1 -->
+        <details>
+            <summary>Estrategia Contable y Fiscal</summary>
+            <div class="content">
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Gestión, cálculo e interpretación de contabilidad general.</li>
+                    <li>Declaraciones de impuestos mensuales y anuales.</li>
+                    <li>Planeación y regularización fiscal ante autoridades.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Analizamos el estado actual de tu negocio, diagnosticamos inconsistencias previas y estructuramos un calendario de cumplimiento óptimo y transparente.</p>
+            </div>
+        </details>
+
+        <!-- SERVICIO 2 -->
+        <details>
+            <summary>Consultoría Financiera y Empresarial</summary>
+            <div class="content">
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Análisis de estados financieros para la toma de decisiones.</li>
+                    <li>Evaluación de rentabilidad y reducción de costos operativos.</li>
+                    <li>Proyecciones de crecimiento empresarial a corto y largo plazo.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Evaluamos tus flujos de efectivo e implementamos indicadores clave de rendimiento (KPIs) para asegurar que cada inversión maximice su valor.</p>
+            </div>
+        </details>
+
+        <!-- SERVICIO 3 -->
+        <details>
+            <summary>Auditoría y Gestión de Riesgos</summary>
+            <div class="content">
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Auditorías internas y preventivas de estados financieros.</li>
+                    <li>Identificación y mitigación de riesgos fiscales o legales.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Realizamos revisiones minuciosas de tus operaciones para detectar vulnerabilidades a tiempo, asegurando un blindaje total del patrimonio de tu negocio.</p>
+            </div>
+        </details>
+
+        <!-- SERVICIO 4 -->
+        <details>
+            <summary>Asesoría Corporativa y Patrimonial</summary>
+            <div class="content">
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Protección jurídica y legal de bienes patrimoniales.</li>
+                    <li>Estructuración corporativa de empresas familiares y sociedades.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Diseñamos vehículos legales y corporativos a la medida para garantizar la continuidad del negocio y el resguardo de tus activos a lo largo del tiempo.</p>
+            </div>
+        </details>
+
+        <!-- SERVICIO 5 -->
+        <details>
+            <summary>Capacitación Profesional</summary>
+            <div class="content">
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Cursos especializados para personal de administración y finanzas.</li>
+                    <li>Actualización constante en reformas fiscales y normativas vigentes.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Impartimos talleres teórico-prácticos adaptados al giro comercial de tu empresa, asegurando que tu equipo cuente con las mejores herramientas operativas.</p>
+            </div>
+        </details>
+
+        <a href="índice.html" class="btn-back">← Volver al Inicio</a>
+        
+    </div>
+
+</body>
+</html>
