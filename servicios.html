@@ -18,12 +18,13 @@
             color: #2d3748; 
         }
         .container {
-            max-width: 800px; 
+            max-width: 1000px; 
             margin: 50px auto; 
             padding: 40px; 
             background-color: #fcfaf2; 
             border-radius: 12px; 
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
+            text-align: center;
         }
         .header-section {
             text-align: left; 
@@ -46,85 +47,94 @@
             font-size: 17px;
             line-height: 1.8;
             color: #4a5568;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             text-align: justify;
         }
-        
-        details {
-            background-color: #ffffff; 
+
+        /* DISEÑO EN REJILLA / CUADROS */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            margin-bottom: 15px;
-            padding: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
             text-align: left;
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-        details:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-        details[open] {
-            border-color: #c5a059; 
-            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.12);
-            transform: translateY(0);
-        }
-        summary {
-            font-size: 19px;
-            font-weight: bold;
-            color: #002b49; 
-            cursor: pointer;
-            outline: none;
-            list-style: none; 
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        summary::-webkit-details-marker {
-            display: none;
-        }
-        summary::after {
-            content: "➕";
-            font-size: 13px;
-            color: #c5a059;
-            transition: transform 0.4s ease;
-        }
-        details[open] summary::after {
-            transform: rotate(180deg);
-            content: "➖";
+            flex-direction: column;
         }
 
-        .content {
-            margin-top: 15px;
-            font-size: 16px;
-            color: #4a5568;
-            line-height: 1.8;
-            animation: fadeInSuave 0.5s ease-out forwards;
-        }
-        @keyframes fadeInSuave {
-            from { opacity: 0; transform: translateY(-8px); }
-            to { opacity: 1; transform: translateY(0); }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.15);
+            border-color: #c5a059;
         }
 
-        .content h4 {
+        /* Destacar la tarjeta de tecnología sutilmente */
+        .tech-highlight {
+            border: 1px dashed #c5a059;
+            background-color: #fdfcf7;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #eaeaea;
+        }
+
+        .service-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content h3 {
             color: #002b49;
-            margin: 22px 0 10px 0;
-            font-size: 18px;
-            border-bottom: 1px dashed #e2e8f0;
-            padding-bottom: 5px;
-            letter-spacing: 0.3px;
-        }
-        .content ul {
-            margin-left: 20px;
-            padding-left: 0;
-        }
-        .content li {
+            font-size: 20px;
+            margin-top: 0;
             margin-bottom: 10px;
-            text-align: justify;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+
+        .service-content p {
+            font-size: 14px;
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .service-content h4 {
+            color: #c5a059;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 10px 0 5px 0;
+        }
+
+        .service-content ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .service-content li {
+            margin-bottom: 6px;
         }
 
         .btn-back {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 20px;
             color: #002b49;
             text-decoration: none;
             font-weight: bold;
@@ -147,81 +157,101 @@
         </div>
 
         <p class="intro-text">
-            Cada empresa enfrenta retos diferentes. Por eso ofrecemos soluciones personalizadas que van más allá del cumplimiento ordinario, ayudando a proteger tu patrimonio y optimizar tus recursos estratégicamente. Despliega cada categoría para conocer los servicios específicos y nuestros procesos de trabajo.
+            Cada empresa enfrenta retos diferentes. Por eso ofrecemos soluciones personalizadas que van más allá del cumplimiento ordinario. <strong>Aptamos la tecnología de vanguardia e Inteligencia Artificial para automatizar y optimizar nuestros procesos operativos; esto nos permite reducir tiempos de gestión mecánica y dedicar toda nuestra energía y prioridad a lo que verdaderamente importa: diseñar la estrategia de tu futuro.</strong>
         </p>
 
-        <!-- SERVICIO 1 -->
-        <details>
-            <summary>Estrategia Contable y Fiscal</summary>
-            <div class="content">
-                <h4>Servicios Específicos:</h4>
-                <ul>
-                    <li><strong>Diagnóstico y Regularización:</strong> Revisión minuciosa de ejercicios fiscales previos para corregir discrepancias y evitar multas o requerimientos de la autoridad.</li>
-                    <li><strong>Contabilidad Mensual Estratégica:</strong> Captura, procesamiento y evaluación de transacciones bajo estrictas normas financieras, emitiendo estados financieros claros y útiles.</li>
-                    <li><strong>Cálculo e Impuestos:</strong> Presentación oportuna de declaraciones mensuales, anuales e informativas, optimizando la carga tributaria siempre dentro del marco de la legalidad.</li>
-                </ul>
-                <h4>Nuestro Proceso:</h4>
-                <p>Analizamos el estado actual de tu negocio, diagnosticamos inconsistencias previas y estructuramos un calendario de cumplimiento óptimo y transparente para blindar tu operación operativa.</p>
-            </div>
-        </details>
+        <div class="services-grid">
 
-        <!-- SERVICIO 2 -->
-        <details>
-            <summary>Consultoría Financiera y Empresarial</summary>
-            <div class="content">
-                <h4>Servicios Específicos:</h4>
-                <ul>
-                    <li><strong>Análisis de Viabilidad y Rentabilidad:</strong> Evaluamos tus márgenes de ganancia, costos fijos y variables para detectar fugas de capital e incrementar la eficiencia del dinero.</li>
-                    <li><strong>Proyecciones de Crecimiento:</strong> Modelado financiero a corto, mediano y largo plazo para evaluar escenarios comerciales antes de realizar inversiones importantes.</li>
-                    <li><strong>Gestión de Tesorería:</strong> Estrategias para optimizar flujos de efectivo, asegurando que tu negocio siempre cuente con la liquidez necesaria para operar sin presiones.</li>
-                </ul>
-                <h4>Nuestro Proceso:</h4>
-                <p>Evaluamos tus estados financieros históricos, implementamos indicadores clave de rendimiento (KPIs) a tu medida y te acompañamos mes a mes a interpretar los datos para tomar decisiones inteligentes.</p>
+            <!-- CUADRO 1 -->
+            <div class="service-card">
+                <img src="servicio1.jpg" alt="Estrategia Contable y Fiscal" class="service-image">
+                <div class="service-content">
+                    <h3>Estrategia Contable y Fiscal</h3>
+                    <p>Analizamos el estado actual de tu negocio para blindar tu operación y optimizar cargas tributarias.</p>
+                    <h4>Servicios:</h4>
+                    <ul>
+                        <li>Diagnóstico y Regularización.</li>
+                        <li>Contabilidad Mensual Estratégica.</li>
+                        <li>Cálculo y Declaración de Impuestos.</li>
+                    </ul>
+                </div>
             </div>
-        </details>
 
-        <!-- SERVICIO 3 -->
-        <details>
-            <summary>Auditoría y Gestión de Riesgos</summary>
-            <div class="content">
-                <h4>Servicios Específicos:</h4>
-                <ul>
-                    <li><strong>Auditoría Interna Preventiva:</strong> Evaluación de controles internos, inventarios y nóminas para asegurar que no existan errores u omisiones en el manejo del negocio.</li>
-                    <li><strong>Identificación de Riesgos Fiscales:</strong> Monitoreo constante de operaciones frente a las listas de autoridades y nuevas reformas para evitar sorpresas legales.</li>
-                </ul>
-                <h4>Nuestro Proceso:</h4>
-                <p>Realizamos revisiones minuciosas e independientes bajo metodologías rigurosas, entregándote un informe claro con soluciones prácticas para blindar por completo el patrimonio empresarial.</p>
+            <!-- CUADRO 2 -->
+            <div class="service-card">
+                <img src="servicio2.jpg" alt="Consultoría Financiera" class="service-image">
+                <div class="service-content">
+                    <h3>Consultoría Financiera</h3>
+                    <p>Evaluamos márgenes de ganancia y flujos de efectivo para una toma de decisiones inteligente.</p>
+                    <h4>Servicios:</h4>
+                    <ul>
+                        <li>Análisis de Viabilidad y Rentabilidad.</li>
+                        <li>Proyecciones de Crecimiento.</li>
+                        <li>Gestión Óptima de Tesorería.</li>
+                    </ul>
+                </div>
             </div>
-        </details>
 
-        <!-- SERVICIO 4 -->
-        <details>
-            <summary>Asesoría Corporativa y Patrimonial</summary>
-            <div class="content">
-                <h4>Servicios Específicos:</h4>
-                <ul>
-                    <li><strong>Constitución y Estructura Legal:</strong> Asesoría en la elección y diseño de sociedades mercantiles que protejan la responsabilidad de los socios.</li>
-                    <li><strong>Protección de Activos Patrimoniales:</strong> Creación de estrategias corporativas seguras para separar el riesgo operativo de la empresa del patrimonio familiar o personal.</li>
-                    <li><strong>Protocolos de Sucesión:</strong> Planeación para empresas familiares que buscan garantizar un relevo generacional ordenado y exitoso.</li>
-                </ul>
-                <h4>Nuestro Proceso:</h4>
-                <p>Diseñamos vehículos legales, contratos y arquitecturas corporativas a la medida de tu visión, garantizando que el esfuerzo de tus años de trabajo esté completamente resguardado.</p>
+            <!-- CUADRO 3 -->
+            <div class="service-card">
+                <img src="servicio3.jpg" alt="Auditoría y Riesgos" class="service-image">
+                <div class="service-content">
+                    <h3>Auditoría y Riesgos</h3>
+                    <p>Revisiones minuciosas e independientes bajo metodologías rigurosas para prevenir contingencias.</p>
+                    <h4>Servicios:</h4>
+                    <ul>
+                        <li>Auditoría Interna Preventiva.</li>
+                        <li>Identificación de Riesgos Fiscales.</li>
+                        <li>Evaluación de Controles Internos.</li>
+                    </ul>
+                </div>
             </div>
-        </details>
 
-        <!-- SERVICIO 5 -->
-        <details>
-            <summary>Capacitación Profesional</summary>
-            <div class="content">
-                <h4>Servicios Específicos:</h4>
-                <ul>
-                    <li><strong>Talleres para Equipos Administrativos:</strong> Formación interna enfocada en facturación correcta, control de gastos y buenas prácticas contables del día a día.</li>
-                    <li><strong>Actualización de Reformas:</strong> Sesiones directas para directivos sobre el impacto de las modificaciones fiscales del año actual en sus respectivos sectores.</li>
-                </ul>
-                <h4>Nuestro Proceso:</h4>
-                <p>Impartimos capacitaciones dinámicas y aplicables al giro real de tu negocio, asegurando que el activo más valioso (tu personal) esté alineado a las normativas vigentes.</p>
+            <!-- CUADRO 4 -->
+            <div class="service-card">
+                <img src="servicio4.jpg" alt="Asesoría Corporativa" class="service-image">
+                <div class="service-content">
+                    <h3>Asesoría Corporativa</h3>
+                    <p>Diseño de arquitecturas legales y vehículos corporativos para resguardar los frutos de tu esfuerzo.</p>
+                    <h4>Servicios:</h4>
+                    <ul>
+                        <li>Constitución y Estructura Legal.</li>
+                        <li>Protección de Activos Patrimoniales.</li>
+                        <li>Protocolos de Sucesión Familiar.</li>
+                    </ul>
+                </div>
             </div>
-        </details>
+
+            <!-- CUADRO 5 -->
+            <div class="service-card">
+                <img src="servicio5.jpg" alt="Capacitación Profesional" class="service-image">
+                <div class="service-content">
+                    <h3>Capacitación Profesional</h3>
+                    <p>Formación dinámica y aplicable enfocada en mantener a tu personal alineado a la normativa.</p>
+                    <h4>Servicios:</h4>
+                    <ul>
+                        <li>Talleres para Equipos Administrativos.</li>
+                        <li>Sesiones de Actualización de Reformas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CUADRO 6: NUEVA SECCIÓN DE TECNOLOGÍA E IA -->
+            <div class="service-card tech-highlight">
+                <img src="servicio6.jpg" alt="Eficiencia Tecnológica e IA" class="service-image">
+                <div class="service-content">
+                    <h3>Eficiencia Digital e IA</h3>
+                    <p>Implementamos sistemas y analítica avanzada para transformar la operación tradicional en un modelo ágil.</p>
+                    <h4>Beneficios para ti:</h4>
+                    <ul>
+                        <li>Procesamiento automatizado de datos contables.</li>
+                        <li>Reducción drástica de errores humanos.</li>
+                        <li>Mayor tiempo invertido en asesoría estratégica.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
 
         <a href="índice.html" class="btn-back">← Volver al Inicio</a>
         
