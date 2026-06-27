@@ -10,7 +10,7 @@
             background-color: #f4f6f9; /* Gris plateado muy suave de fondo */
             margin: 0; 
             padding: 0; 
-            color: #2d3748; /* Gris Oxford oscuro para textos más legibles y elegantes */
+            color: #2d3748; /* Gris Oxford oscuro */
         }
         .container {
             max-width: 800px; 
@@ -18,7 +18,7 @@
             padding: 40px; 
             background-color: #ffffff; 
             border-radius: 12px; 
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); /* Sombra ultra suave */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); 
             text-align: center;
         }
         h1 { 
@@ -52,13 +52,13 @@
             transition: all 0.3s ease;
         }
         details[open] {
-            border-color: #c5a059; /* El borde cambia a dorado al abrirse */
+            border-color: #c5a059; 
             box-shadow: 0 4px 12px rgba(197, 160, 89, 0.1);
         }
         summary {
             font-size: 19px;
             font-weight: bold;
-            color: #002b49; /* Azul Marino */
+            color: #002b49; 
             cursor: pointer;
             outline: none;
             list-style: none; 
@@ -98,11 +98,85 @@
             margin-bottom: 8px;
         }
 
-        /* BOTÓN DORADO OLD MONEY (Llamado a la Acción Principal) */
+        /* SECCIÓN DE TESTIMONIOS (OLD MONEY) */
+        .section-title {
+            color: #002b49;
+            font-size: 24px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .testimonial-card {
+            background-color: #f8fafd;
+            border-left: 4px solid #c5a059;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .stars {
+            color: #c5a059;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: #4a5568;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #002b49;
+            font-size: 14px;
+        }
+
+        /* FORMULARIO DE OPINIONES */
+        .review-form {
+            background-color: #ffffff;
+            border: 1px dashed #c5a059;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .review-form h4 {
+            color: #002b49;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .btn-review {
+            background-color: #002b49;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-review:hover {
+            background-color: #001a2c;
+        }
+
+        /* BOTÓN DORADO PRINCIPAL */
         .btn-cta {
             display: inline-block; 
             padding: 14px 40px; 
-            background-color: #c5a059; /* Dorado Champán */
+            background-color: #c5a059; 
             color: #ffffff; 
             text-decoration: none; 
             border-radius: 6px; 
@@ -113,7 +187,7 @@
             transition: all 0.3s ease;
         }
         .btn-cta:hover {
-            background-color: #aa8643; /* Dorado un poco más oscuro al pasar el mouse */
+            background-color: #aa8643; 
             box-shadow: 0 6px 15px rgba(197, 160, 89, 0.35);
             transform: translateY(-1px);
         }
@@ -121,7 +195,7 @@
         .logo {
             max-width: 220px; 
             height: auto; 
-            margin-top: 40px;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -175,6 +249,37 @@
             <a href="contacto.html" class="btn-cta">
                 Solicitar una Asesoría
             </a>
+        </div>
+
+        <!-- SECCIÓN NUEVA: TESTIMONIOS -->
+        <div class="section-title">La voz de quienes confían en nosotros</div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Excelente servicio. Gracias a su consultoría logramos estructurar nuestra estrategia fiscal de este año y la tranquilidad que te brindan no tiene precio. Totalmente profesionales."</p>
+            <div class="testimonial-author">— Director General, PyME del Sector Comercial</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Más que contadores, se convirtieron en aliados de mi negocio. Te explican todo con total claridad y cercanía."</p>
+            <div class="testimonial-author">— Emprendedora, Servicios Tecnológicos</div>
+        </div>
+
+        <!-- BUZÓN PARA RECIBIR NUEVAS RESEÑAS -->
+        <div class="review-form">
+            <h4>Comparta su experiencia con nosotros</h4>
+            <form action="#" method="POST">
+                <input type="text" class="form-input" placeholder="Su Nombre o Empresa" required>
+                <select class="form-input" required>
+                    <option value="">Seleccione su calificación</option>
+                    <option value="5">★★★★★ (Excelente)</option>
+                    <option value="4">★★★★ (Muy Bueno)</option>
+                    <option value="3">★★★ (Bueno)</option>
+                </select>
+                <textarea class="form-input" placeholder="Escriba su reseña aquí..." style="height: 80px; resize: vertical;" required></textarea>
+                <button type="submit" class="btn-review">Enviar Reseña</button>
+            </form>
         </div>
         
         <!-- Tu Logo al final -->
