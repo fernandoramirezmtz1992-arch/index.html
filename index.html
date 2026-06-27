@@ -41,13 +41,13 @@
             display: block;
         }
         h1 { 
-            color: #002b49; /* Azul Marino Imperial */
+            color: #002b49; 
             font-size: 32px;
             margin: 0 0 5px 0;
             letter-spacing: 0.5px;
         }
         .subtitle {
-            color: #c5a059; /* Dorado Champán */
+            color: #c5a059; 
             font-size: 18px;
             font-weight: bold;
             margin: 0;
@@ -61,7 +61,7 @@
             margin-bottom: 40px;
         }
         
-        /* Estilos para las pestañas desplegables (Acordeón) */
+        /* PESTAÑAS DESPLEGABLES CON MOVIMIENTO MEJORADO */
         details {
             background-color: #ffffff; 
             border: 1px solid #e2e8f0;
@@ -69,11 +69,16 @@
             margin-bottom: 15px;
             padding: 18px;
             text-align: left;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Curva premium de movimiento */
+        }
+        details:hover {
+            transform: translateY(-2px); /* Flota levemente al pasar el cursor */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
         details[open] {
             border-color: #c5a059; 
-            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.1);
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.12);
+            transform: translateY(0);
         }
         summary {
             font-size: 19px;
@@ -86,21 +91,34 @@
             justify-content: space-between;
             align-items: center;
         }
+        summary::-webkit-details-marker {
+            display: none; /* Quita flecha nativa en algunos navegadores */
+        }
         summary::after {
             content: "➕";
             font-size: 13px;
             color: #c5a059;
+            transition: transform 0.4s ease; /* Movimiento de rotación */
         }
         details[open] summary::after {
+            transform: rotate(180deg); /* Gira elegantemente al abrir */
             content: "➖";
         }
+
+        /* ANIMACIÓN DE ENTRADA SUAVE PARA EL CONTENIDO */
         .content {
             margin-top: 15px;
             font-size: 16px;
             color: #4a5568;
             line-height: 1.7;
             text-align: justify;
+            animation: fadelnSuave 0.5s ease-out forwards; /* Entrada fluida */
         }
+        @keyframes fadelnSuave {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .content h3 {
             color: #002b49;
             margin-top: 5px;
@@ -118,7 +136,7 @@
             color: #3182ce;
         }
 
-        /* SECCIÓN DE TESTIMONIOS */
+        /* SECCIÓN DE TESTIMONIOS CON EFECTO DE ELEVACIÓN */
         .section-title {
             color: #002b49;
             font-size: 24px;
@@ -136,7 +154,12 @@
             border-radius: 0 8px 8px 0;
             margin-bottom: 20px;
             text-align: left;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.01) translateX(3px); /* Se desplaza e infla un milímetro */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
         .stars {
             color: #c5a059;
@@ -156,7 +179,7 @@
             font-size: 14px;
         }
 
-        /* FORMULARIO DE OPINIONES SIN BORDES */
+        /* FORMULARIO DE OPINIONES */
         .review-form {
             background-color: transparent; 
             border: none; 
@@ -180,6 +203,11 @@
             border-radius: 6px;
             box-sizing: border-box;
             font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #c5a059; /* Al escribir, el borde se ilumina en dorado */
         }
         .btn-review {
             background-color: #002b49;
@@ -189,13 +217,14 @@
             border-radius: 6px;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
         }
         .btn-review:hover {
             background-color: #001a2c;
+            transform: translateY(-1px);
         }
 
-        /* CONTENEDOR Y ESTILOS DE LOS BOTONES DE ACCIÓN */
+        /* BOTONES PRINCIPALES: RESPONSIVOS Y CON FLOTACIÓN DINÁMICA */
         .cta-container {
             text-align: center;
             margin-top: 45px; 
@@ -208,7 +237,7 @@
         .btn-cta {
             display: inline-block; 
             padding: 14px 28px; 
-            background-color: #c5a059; /* Dorado */
+            background-color: #c5a059; 
             color: #ffffff; 
             text-decoration: none; 
             border-radius: 6px; 
@@ -216,20 +245,20 @@
             font-size: 16px; 
             letter-spacing: 0.5px;
             box-shadow: 0 4px 10px rgba(197, 160, 89, 0.25);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         }
         .btn-cta:hover {
             background-color: #aa8643; 
-            box-shadow: 0 6px 15px rgba(197, 160, 89, 0.35);
-            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
+            transform: translateY(-3px); /* Flotación elegante hacia arriba */
         }
         .btn-secondary {
-            background-color: #002b49; /* Azul Marino */
+            background-color: #002b49; 
             box-shadow: 0 4px 10px rgba(0, 43, 73, 0.25);
         }
         .btn-secondary:hover {
             background-color: #001a2c;
-            box-shadow: 0 6px 15px rgba(0, 43, 73, 0.35);
+            box-shadow: 0 8px 20px rgba(0, 43, 73, 0.4);
         }
     </style>
 </head>
@@ -325,7 +354,7 @@
 
         <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"Más que contadores, se convirtieron en aliados de mi negocio. Te expican todo con total claridad y cercanía."</p>
+            <p class="testimonial-text">"Más que contadores, se convirtieron en aliados de mi negocio. Te explican todo con total claridad y cercanía."</p>
             <div class="testimonial-author">— Emprendedora, Servicios Tecnológicos</div>
         </div>
 
