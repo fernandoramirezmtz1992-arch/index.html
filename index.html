@@ -6,8 +6,8 @@
     <title>Consultoría Integral Empresarial</title>
     <style>
         body { 
-            font-family: 'Arial', sans-serif; 
-            /* TEXTURA DE MADERA: Base café caoba con líneas que emulan las vetas */
+            font-family: 'Georgia', serif; /* Cambiada a Georgia para un estilo Old Money real */
+            /* TEXTURA DE MADERA */
             background-color: #3d2314; 
             background-image: 
                 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
@@ -22,23 +22,37 @@
             max-width: 800px; 
             margin: 50px auto; 
             padding: 40px; 
-            background-color: #fcfaf2; /* TONO CREMA / MARFIL PREMIUM */
+            background-color: #fcfaf2; /* Tono Crema / Marfil */
             border-radius: 12px; 
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
-            text-align: center;
+        }
+        
+        /* DISEÑO DE ENCABEZADO: LOGO IZQUIERDA Y NOMBRE ABAJO */
+        .header-section {
+            text-align: left; /* Todo alineado a la izquierda */
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+        .logo {
+            max-width: 180px; /* Tamaño elegante para la esquina */
+            height: auto; 
+            margin-bottom: 15px;
+            display: block;
         }
         h1 { 
             color: #002b49; /* Azul Marino Imperial */
-            font-size: 34px;
-            margin-bottom: 10px;
+            font-size: 32px;
+            margin: 0 0 5px 0;
             letter-spacing: 0.5px;
         }
         .subtitle {
             color: #c5a059; /* Dorado Champán */
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 35px;
+            margin: 0;
         }
+
         .welcome-text { 
             font-size: 18px; 
             color: #4a5568; 
@@ -113,6 +127,7 @@
             font-weight: bold;
             border-bottom: 1px solid #e2e8f0;
             padding-bottom: 10px;
+            text-align: left;
         }
         .testimonial-card {
             background-color: #ffffff;
@@ -141,10 +156,10 @@
             font-size: 14px;
         }
 
-        /* FORMULARIO DE OPINIONES SIN CUADRO MARCADO */
+        /* FORMULARIO DE OPINIONES SIN BORDES */
         .review-form {
-            background-color: transparent; /* Se fusiona con el fondo crema */
-            border: none; /* Quitamos las líneas marcadas */
+            background-color: transparent; 
+            border: none; 
             padding: 10px 0;
             text-align: left;
             margin-top: 40px;
@@ -161,7 +176,7 @@
             padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #e2e8f0;
-            background-color: #ffffff; /* Los cuadros para escribir se mantienen limpios en blanco */
+            background-color: #ffffff; 
             border-radius: 6px;
             box-sizing: border-box;
             font-family: inherit;
@@ -199,19 +214,23 @@
             box-shadow: 0 6px 15px rgba(197, 160, 89, 0.35);
             transform: translateY(-1px);
         }
-
-        .logo {
-            max-width: 220px; 
-            height: auto; 
-            margin-top: 50px;
+        .cta-container {
+            text-align: center;
+            margin-top: 45px; 
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Consultoría Integral Empresarial</h1>
-        <div class="subtitle">Si has llegado hasta aquí, no fue por casualidad.</div>
+        
+        <!-- ENCABEZADO RENOVADO (Logo izquierda, nombre abajo) -->
+        <div class="header-section">
+            <img src="Logo 1.png" alt="Logo de Consultoría Integral" class="logo">
+            <h1>Consultoría Integral Empresarial</h1>
+            <div class="subtitle">Si has llegado hasta aquí, no fue por casualidad.</div>
+        </div>
         
         <p class="welcome-text">
             Bienvenido a un despacho donde la confianza, la experiencia y el compromiso respaldan cada decisión. Más que ofrecer servicios contables, fiscales y financieros, trabajamos para proteger tu patrimonio, impulsar el crecimiento de tu empresa y brindarte la tranquilidad de estar en las manos correctas.
@@ -253,7 +272,7 @@
         </details>
 
         <!-- Botón de Enlace de Acción Principal -->
-        <div style="margin-top: 45px; margin-bottom: 15px;">
+        <div class="cta-container">
             <a href="contacto.html" class="btn-cta">
                 Solicitar una Asesoría
             </a>
@@ -274,7 +293,7 @@
             <div class="testimonial-author">— Emprendedora, Servicios Tecnológicos</div>
         </div>
 
-        <!-- BUZÓN PARA RECIBIR NUEVAS RESEÑAS (AHORA INTEGRADO Y SIN BORDES) -->
+        <!-- BUZÓN PARA RECIBIR NUEVAS RESEÑAS -->
         <div class="review-form">
             <h4>Comparta su experiencia con nosotros</h4>
             <form action="#" method="POST">
@@ -290,8 +309,6 @@
             </form>
         </div>
         
-        <!-- Tu Logo al final -->
-        <img src="Logo 1.png" alt="Logo de Consultoría Integral" class="logo">
     </div>
 
 </body>
