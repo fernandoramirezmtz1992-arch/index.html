@@ -7,10 +7,16 @@
     <style>
         body { 
             font-family: 'Arial', sans-serif; 
-            background-color: #f4f6f9; /* Gris plateado muy suave de fondo */
+            /* TEXTURA DE MADERA: Base café caoba con líneas que emulan las vetas */
+            background-color: #3d2314; 
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px),
+                linear-gradient(90deg, #4a2c1b, #351e11);
+            background-size: 4px 100%, 100% 20px, 100% 100%;
             margin: 0; 
             padding: 0; 
-            color: #2d3748; /* Gris Oxford oscuro */
+            color: #2d3748; 
         }
         .container {
             max-width: 800px; 
@@ -18,7 +24,7 @@
             padding: 40px; 
             background-color: #ffffff; 
             border-radius: 12px; 
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra más profunda para que resalte sobre la madera */
             text-align: center;
         }
         h1 { 
@@ -28,7 +34,7 @@
             letter-spacing: 0.5px;
         }
         .subtitle {
-            color: #c5a059; /* Dorado Champán Premium */
+            color: #c5a059; /* Dorado Champán */
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 35px;
@@ -98,7 +104,7 @@
             margin-bottom: 8px;
         }
 
-        /* SECCIÓN DE TESTIMONIOS (OLD MONEY) */
+        /* SECCIÓN DE TESTIMONIOS */
         .section-title {
             color: #002b49;
             font-size: 24px;
@@ -251,7 +257,7 @@
             </a>
         </div>
 
-        <!-- SECCIÓN NUEVA: TESTIMONIOS -->
+        <!-- SECCIÓN: TESTIMONIOS -->
         <div class="section-title">La voz de quienes confían en nosotros</div>
 
         <div class="testimonial-card">
