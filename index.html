@@ -22,9 +22,9 @@
             max-width: 800px; 
             margin: 50px auto; 
             padding: 40px; 
-            background-color: #ffffff; 
+            background-color: #fcfaf2; /* TONO CREMA / MARFIL PREMIUM */
             border-radius: 12px; 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra más profunda para que resalte sobre la madera */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
             text-align: center;
         }
         h1 { 
@@ -49,7 +49,7 @@
         
         /* Estilos para las pestañas desplegables (Acordeón) */
         details {
-            background-color: #ffffff;
+            background-color: #ffffff; 
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             margin-bottom: 15px;
@@ -115,12 +115,13 @@
             padding-bottom: 10px;
         }
         .testimonial-card {
-            background-color: #f8fafd;
+            background-color: #ffffff;
             border-left: 4px solid #c5a059;
             padding: 20px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 20px;
             text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
         .stars {
             color: #c5a059;
@@ -140,26 +141,27 @@
             font-size: 14px;
         }
 
-        /* FORMULARIO DE OPINIONES */
+        /* FORMULARIO DE OPINIONES SIN CUADRO MARCADO */
         .review-form {
-            background-color: #ffffff;
-            border: 1px dashed #c5a059;
-            padding: 25px;
-            border-radius: 8px;
+            background-color: transparent; /* Se fusiona con el fondo crema */
+            border: none; /* Quitamos las líneas marcadas */
+            padding: 10px 0;
             text-align: left;
-            margin-top: 30px;
+            margin-top: 40px;
         }
         .review-form h4 {
             color: #002b49;
             margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 18px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
         }
         .form-input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #e2e8f0;
+            background-color: #ffffff; /* Los cuadros para escribir se mantienen limpios en blanco */
             border-radius: 6px;
             box-sizing: border-box;
             font-family: inherit;
@@ -167,7 +169,7 @@
         .btn-review {
             background-color: #002b49;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
             border-radius: 6px;
             font-weight: bold;
@@ -272,7 +274,7 @@
             <div class="testimonial-author">— Emprendedora, Servicios Tecnológicos</div>
         </div>
 
-        <!-- BUZÓN PARA RECIBIR NUEVAS RESEÑAS -->
+        <!-- BUZÓN PARA RECIBIR NUEVAS RESEÑAS (AHORA INTEGRADO Y SIN BORDES) -->
         <div class="review-form">
             <h4>Comparta su experiencia con nosotros</h4>
             <form action="#" method="POST">
