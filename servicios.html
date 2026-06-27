@@ -44,13 +44,13 @@
         }
         .intro-text {
             font-size: 17px;
-            line-height: 1.7;
+            line-height: 1.8;
             color: #4a5568;
             margin-bottom: 35px;
             text-align: justify;
         }
         
-        /* Acordeones */
+        /* Acordeones con micro-interacciones estéticas */
         details {
             background-color: #ffffff; 
             border: 1px solid #e2e8f0;
@@ -58,10 +58,16 @@
             margin-bottom: 15px;
             padding: 18px;
             text-align: left;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        details:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
         details[open] {
             border-color: #c5a059; 
-            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.1);
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.12);
+            transform: translateY(0);
         }
         summary {
             font-size: 19px;
@@ -74,33 +80,48 @@
             justify-content: space-between;
             align-items: center;
         }
+        summary::-webkit-details-marker {
+            display: none;
+        }
         summary::after {
             content: "➕";
             font-size: 13px;
             color: #c5a059;
+            transition: transform 0.4s ease;
         }
         details[open] summary::after {
+            transform: rotate(180deg);
             content: "➖";
         }
+
+        /* Animación interna fluida */
         .content {
             margin-top: 15px;
             font-size: 16px;
             color: #4a5568;
-            line-height: 1.7;
+            line-height: 1.8;
+            animation: fadeInSuave 0.5s ease-out forwards;
         }
+        @keyframes fadeInSuave {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .content h4 {
             color: #002b49;
-            margin: 20px 0 10px 0;
+            margin: 22px 0 10px 0;
             font-size: 18px;
             border-bottom: 1px dashed #e2e8f0;
             padding-bottom: 5px;
+            letter-spacing: 0.3px;
         }
         .content ul {
             margin-left: 20px;
             padding-left: 0;
         }
         .content li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            text-align: justify;
         }
 
         /* Botón de regreso */
@@ -111,10 +132,11 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
         }
         .btn-back:hover {
             color: #c5a059;
+            transform: translateX(-3px);
         }
     </style>
 </head>
@@ -137,12 +159,12 @@
             <div class="content">
                 <h4>Servicios Específicos:</h4>
                 <ul>
-                    <li>Gestión, cálculo e interpretación de contabilidad general.</li>
-                    <li>Declaraciones de impuestos mensuales y anuales.</li>
-                    <li>Planeación y regularización fiscal ante autoridades.</li>
+                    <li><strong>Diagnóstico y Regularización:</strong> Revisión minuciosa de ejercicios fiscales previos para corregir discrepancias y evitar multas o requerimientos de la autoridad.</li>
+                    <li><strong>Contabilidad Mensual Estratégica:</strong> Captura, procesamiento y evaluación de transacciones bajo estrictas normas financieras, emitiendo estados financieros claros y útiles.</li>
+                    <li><strong>Cálculo e Impuestos:</strong> Presentación oportuna de declaraciones mensuales, anuales e informativas, optimizando la carga tributaria siempre dentro del marco de la legalidad.</li>
                 </ul>
                 <h4>Nuestro Proceso:</h4>
-                <p>Analizamos el estado actual de tu negocio, diagnosticamos inconsistencias previas y estructuramos un calendario de cumplimiento óptimo y transparente.</p>
+                <p>Analizamos el estado actual de tu negocio, diagnosticamos inconsistencias previas y estructuramos un calendario de cumplimiento óptimo y transparente para blindar tu operación operativa.</p>
             </div>
         </details>
 
@@ -152,12 +174,12 @@
             <div class="content">
                 <h4>Servicios Específicos:</h4>
                 <ul>
-                    <li>Análisis de estados financieros para la toma de decisiones.</li>
-                    <li>Evaluación de rentabilidad y reducción de costos operativos.</li>
-                    <li>Proyecciones de crecimiento empresarial a corto y largo plazo.</li>
+                    <li><strong>Análisis de Viabilidad y Rentabilidad:</strong> Evaluamos tus márgenes de ganancia, costos fijos y variables para detectar fugas de capital e incrementar la eficiencia del dinero.</li>
+                    <li><strong>Proyecciones de Crecimiento:</strong> Modelado financiero a corto, mediano y largo plazo para evaluar escenarios comerciales antes de realizar inversiones importantes.</li>
+                    <li><strong>Gestión de Tesorería:</strong> Estrategias para optimizar flujos de efectivo, asegurando que tu negocio siempre cuente con la liquidez necesaria para operar sin presiones.</li>
                 </ul>
                 <h4>Nuestro Proceso:</h4>
-                <p>Evaluamos tus flujos de efectivo e implementamos indicadores clave de rendimiento (KPIs) para asegurar que cada inversión maximice su valor.</p>
+                <p>Evaluamos tus estados financieros históricos, implementamos indicadores clave de rendimiento (KPIs) a tu medida y te acompañamos mes a mes a interpretar los datos para tomar decisiones inteligentes.</p>
             </div>
         </details>
 
@@ -167,11 +189,11 @@
             <div class="content">
                 <h4>Servicios Específicos:</h4>
                 <ul>
-                    <li>Auditorías internas y preventivas de estados financieros.</li>
-                    <li>Identificación y mitigación de riesgos fiscales o legales.</li>
+                    <li><strong>Auditoría Interna Preventiva:</strong> Evaluación de controles internos, inventarios y nóminas para asegurar que no existan errores u omisiones en el manejo del negocio.</li>
+                    <li><strong>Identificación de Riesgos Fiscales:</strong> Monitoreo constante de operaciones frente a las listas de autoridades y nuevas reformas para evitar sorpresas legales.</li>
                 </ul>
                 <h4>Nuestro Proceso:</h4>
-                <p>Realizamos revisiones minuciosas de tus operaciones para detectar vulnerabilidades a tiempo, asegurando un blindaje total del patrimonio de tu negocio.</p>
+                <p>Realizamos revisiones minuciosas e independientes bajo metodologías rigurosas, entregándote un informe claro con soluciones prácticas para blindar por completo el patrimonio empresarial.</p>
             </div>
         </details>
 
@@ -181,11 +203,12 @@
             <div class="content">
                 <h4>Servicios Específicos:</h4>
                 <ul>
-                    <li>Protección jurídica y legal de bienes patrimoniales.</li>
-                    <li>Estructuración corporativa de empresas familiares y sociedades.</li>
+                    <li><strong>Constitución y Estructura Legal:</strong> Asesoría en la elección y diseño de sociedades mercantiles que protejan la responsabilidad de los socios.</li>
+                    <li><strong>Protección de Activos Patrimoniales:</strong> Creación de estrategias corporativas seguras para separar el riesgo operativo de la empresa del patrimonio familiar o personal.</li>
+                    <li><strong>Protocolos de Sucesión:</strong> Planeación para empresas familiares que buscan garantizar un relevo generacional ordenado y exitoso.</li>
                 </ul>
                 <h4>Nuestro Proceso:</h4>
-                <p>Diseñamos vehículos legales y corporativos a la medida para garantizar la continuidad del negocio y el resguardo de tus activos a lo largo del tiempo.</p>
+                <p>Diseñamos vehículos legales, contratos y arquitecturas corporativas a la medida de tu visión, garantizando que el esfuerzo de tus años de trabajo esté completamente resguardado.</p>
             </div>
         </details>
 
@@ -195,15 +218,16 @@
             <div class="content">
                 <h4>Servicios Específicos:</h4>
                 <ul>
-                    <li>Cursos especializados para personal de administración y finanzas.</li>
-                    <li>Actualización constante en reformas fiscales y normativas vigentes.</li>
+                    <li><strong>Talleres para Equipos Administrativos:</strong> Formación interna enfocada en facturación correcta, control de gastos y buenas prácticas contables del día a día.</li>
+                    <li><strong>Actualización de Reformas:</strong> Sesiones directas para directivos sobre el impacto de las modificaciones fiscales del año actual en sus respectivos sectores.</li>
                 </ul>
                 <h4>Nuestro Proceso:</h4>
-                <p>Impartimos talleres teórico-prácticos adaptados al giro comercial de tu empresa, asegurando que tu equipo cuente con las mejores herramientas operativas.</p>
+                <p>Impartimos capacitaciones dinámicas y aplicables al giro real de tu negocio, asegurando que el activo más valioso (tu personal) esté alineado a las normativas vigentes.</p>
             </div>
         </details>
 
-       <a href="índice.html" class="btn-back">← Volver al Inicio</a>
+        <!-- NOTA: Usamos index.html sin acento para garantizar compatibilidad con servidores web de producción -->
+        <a href="index.html" class="btn-back">← Volver al Inicio</a>
         
     </div>
 
