@@ -14,7 +14,7 @@
         }
         .container {
             max-width: 800px; 
-            margin: 60px auto; 
+            margin: 50px auto; 
             padding: 40px; 
             background-color: #ffffff; 
             border-radius: 12px; 
@@ -39,10 +39,69 @@
             text-align: justify; 
             margin-bottom: 40px;
         }
+        
+        /* Estilos para las pestañas desplegables (Acordeón) */
+        details {
+            background-color: #f8fafd;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        details[open] {
+            border-color: #005b96;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        summary {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+            cursor: pointer;
+            outline: none;
+            list-style: none; /* Quita la flecha por defecto */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::after {
+            content: "➕";
+            font-size: 14px;
+            color: #005b96;
+        }
+        details[open] summary::after {
+            content: "➖";
+        }
+        .content {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        .content h3 {
+            color: #003366;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .content ul {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .content li {
+            margin-bottom: 8px;
+        }
+
         .logo {
-            max-width: 250px; 
+            max-width: 220px; 
             height: auto; 
-            margin-top: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -57,7 +116,41 @@
             <br><br>
             Será un gusto acompañarte en el camino hacia tus objetivos.
         </p>
+
+        <!-- SECCIÓN 1: QUIÉNES SOMOS -->
+        <details>
+            <summary>Quiénes Somos / Nuestra Experiencia</summary>
+            <div class="content">
+                <h3>Más que un despacho</h3>
+                <p>Creemos que la contabilidad debe convertirse en una herramienta para crecer, no solo en una obligación por cumplir.</p>
+                <p>Por eso reunimos distintas áreas de especialidad para ofrecer soluciones integrales que permitan a nuestros clientes tomar mejores decisiones, prevenir riesgos y aprovechar nuevas oportunidades.</p>
+                <p>Trabajamos con personas, emprendedores y empresas de diferentes sectores, entendiendo que cada proyecto tiene objetivos, retos y necesidades propias.</p>
+                <p>Más que atender números, acompañamos proyectos de vida y negocios con la responsabilidad, cercanía y profesionalismo que cada cliente merece.</p>
+            </div>
+        </details>
+
+        <!-- SECCIÓN 2: NUESTRA ESPECIALIDAD -->
+        <details>
+            <summary>Nuestra Especialidad</summary>
+            <div class="content">
+                <p>Nos especializamos fuertemente en atender a micro, pequeñas y medianas empresas, entendiendo sus retos financieros específicos y adaptándonos a sus necesidades.</p>
+            </div>
+        </details>
+
+        <!-- SECCIÓN 3: SERVICIOS -->
+        <details>
+            <summary>Nuestros Servicios</summary>
+            <div class="content">
+                <p>Ofrecemos soluciones estratégicas e integrales diseñadas para tu tranquilidad:</p>
+                <ul>
+                    <li><strong>Servicios Contables:</strong> Gestión e interpretación de tu contabilidad.</li>
+                    <li><strong>Asesoría Fiscal:</strong> Estrategias de impuestos y cumplimiento legal.</li>
+                    <li><strong>Consultoría Financiera:</strong> Análisis para la toma de decisiones y protección de patrimonio.</li>
+                </ul>
+            </div>
+        </details>
         
+        <!-- Tu Logo al final -->
         <img src="Logo 1.png" alt="Logo de Consultoría Integral" class="logo">
     </div>
 
