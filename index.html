@@ -7,10 +7,10 @@
     <style>
         body { 
             font-family: 'Arial', sans-serif; 
-            background-color: #f4f6f9; 
+            background-color: #f4f6f9; /* Gris plateado muy suave de fondo */
             margin: 0; 
             padding: 0; 
-            color: #333;
+            color: #2d3748; /* Gris Oxford oscuro para textos más legibles y elegantes */
         }
         .container {
             max-width: 800px; 
@@ -18,23 +18,24 @@
             padding: 40px; 
             background-color: #ffffff; 
             border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); /* Sombra ultra suave */
             text-align: center;
         }
         h1 { 
-            color: #003366; 
-            font-size: 32px;
+            color: #002b49; /* Azul Marino Imperial */
+            font-size: 34px;
             margin-bottom: 10px;
+            letter-spacing: 0.5px;
         }
         .subtitle {
-            color: #005b96;
+            color: #c5a059; /* Dorado Champán Premium */
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         .welcome-text { 
             font-size: 18px; 
-            color: #555; 
+            color: #4a5568; 
             line-height: 1.8; 
             text-align: justify; 
             margin-bottom: 40px;
@@ -42,34 +43,33 @@
         
         /* Estilos para las pestañas desplegables (Acordeón) */
         details {
-            background-color: #f8fafd;
+            background-color: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             margin-bottom: 15px;
-            padding: 15px;
+            padding: 18px;
             text-align: left;
             transition: all 0.3s ease;
         }
         details[open] {
-            border-color: #005b96;
-            background-color: #ffffff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border-color: #c5a059; /* El borde cambia a dorado al abrirse */
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.1);
         }
         summary {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: bold;
-            color: #003366;
+            color: #002b49; /* Azul Marino */
             cursor: pointer;
             outline: none;
-            list-style: none; /* Quita la flecha por defecto */
+            list-style: none; 
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         summary::after {
             content: "➕";
-            font-size: 14px;
-            color: #005b96;
+            font-size: 13px;
+            color: #c5a059;
         }
         details[open] summary::after {
             content: "➖";
@@ -77,12 +77,12 @@
         .content {
             margin-top: 15px;
             font-size: 16px;
-            color: #555;
+            color: #4a5568;
             line-height: 1.7;
             text-align: justify;
         }
         .content h3 {
-            color: #003366;
+            color: #002b49;
             margin-top: 5px;
             margin-bottom: 15px;
             font-size: 22px;
@@ -96,6 +96,26 @@
         }
         .content li {
             margin-bottom: 8px;
+        }
+
+        /* BOTÓN DORADO OLD MONEY (Llamado a la Acción Principal) */
+        .btn-cta {
+            display: inline-block; 
+            padding: 14px 40px; 
+            background-color: #c5a059; /* Dorado Champán */
+            color: #ffffff; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            font-size: 18px; 
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.25);
+            transition: all 0.3s ease;
+        }
+        .btn-cta:hover {
+            background-color: #aa8643; /* Dorado un poco más oscuro al pasar el mouse */
+            box-shadow: 0 6px 15px rgba(197, 160, 89, 0.35);
+            transform: translateY(-1px);
         }
 
         .logo {
@@ -149,14 +169,15 @@
                 </ul>
             </div>
         </details>
-        
-        <!-- Tu Logo al final -->
-        <!-- Botón de Enlace a la Página de Contacto -->
-        <div style="margin-top: 40px;">
-            <a href="contacto.html" style="display: inline-block; padding: 14px 35px; background-color: #003366; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+
+        <!-- Botón de Enlace de Acción Principal -->
+        <div style="margin-top: 45px; margin-bottom: 15px;">
+            <a href="contacto.html" class="btn-cta">
                 Solicitar una Asesoría
             </a>
         </div>
+        
+        <!-- Tu Logo al final -->
         <img src="Logo 1.png" alt="Logo de Consultoría Integral" class="logo">
     </div>
 
