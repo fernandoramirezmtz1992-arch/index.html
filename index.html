@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoría Integral Empresarial</title>
+    <title>Nuestros Servicios - Consultoría Integral</title>
     <style>
         body { 
             font-family: 'Georgia', serif; 
-            /* TEXTURA DE MADERA */
             background-color: #3d2314; 
             background-image: 
                 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
@@ -22,46 +21,36 @@
             max-width: 800px; 
             margin: 50px auto; 
             padding: 40px; 
-            background-color: #fcfaf2; /* Tono Crema / Marfil */
+            background-color: #fcfaf2; 
             border-radius: 12px; 
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
         }
-        
-        /* DISEÑO DE ENCABEZADO */
         .header-section {
             text-align: left; 
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 20px;
         }
-        .logo {
-            max-width: 180px; 
-            height: auto; 
-            margin-bottom: 15px;
-            display: block;
-        }
         h1 { 
-            color: #002b49; /* Azul Marino Imperial */
+            color: #002b49; 
             font-size: 32px;
             margin: 0 0 5px 0;
-            letter-spacing: 0.5px;
         }
         .subtitle {
-            color: #c5a059; /* Dorado Champán */
+            color: #c5a059; 
             font-size: 18px;
             font-weight: bold;
             margin: 0;
         }
-
-        .welcome-text { 
-            font-size: 18px; 
-            color: #4a5568; 
-            line-height: 1.8; 
-            text-align: justify; 
-            margin-bottom: 40px;
+        .intro-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #4a5568;
+            margin-bottom: 35px;
+            text-align: justify;
         }
         
-        /* Estilos para las pestañas desplegables (Acordeón) */
+        /* Acordeones */
         details {
             background-color: #ffffff; 
             border: 1px solid #e2e8f0;
@@ -69,7 +58,6 @@
             margin-bottom: 15px;
             padding: 18px;
             text-align: left;
-            transition: all 0.3s ease;
         }
         details[open] {
             border-color: #c5a059; 
@@ -99,16 +87,13 @@
             font-size: 16px;
             color: #4a5568;
             line-height: 1.7;
-            text-align: justify;
         }
-        .content h3 {
+        .content h4 {
             color: #002b49;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        .content p {
-            margin-bottom: 15px;
+            margin: 20px 0 10px 0;
+            font-size: 18px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 5px;
         }
         .content ul {
             margin-left: 20px;
@@ -117,126 +102,19 @@
         .content li {
             margin-bottom: 8px;
         }
-        .manifiesto-box {
-            font-style: italic;
-            border-left: 3px solid #c5a059;
-            padding-left: 15px;
-            margin: 15px 0;
-            color: #3182ce;
-        }
 
-        /* SECCIÓN DE TESTIMONIOS */
-        .section-title {
+        /* Botón de regreso */
+        .btn-back {
+            display: inline-block;
+            margin-top: 30px;
             color: #002b49;
-            font-size: 24px;
-            margin-top: 50px;
-            margin-bottom: 25px;
+            text-decoration: none;
             font-weight: bold;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 10px;
-            text-align: left;
+            font-size: 16px;
+            transition: color 0.3s;
         }
-        .testimonial-card {
-            background-color: #ffffff;
-            border-left: 4px solid #c5a059;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 20px;
-            text-align: left;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-        .stars {
+        .btn-back:hover {
             color: #c5a059;
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-        .testimonial-text {
-            font-style: italic;
-            color: #4a5568;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-        .testimonial-author {
-            font-weight: bold;
-            color: #002b49;
-            font-size: 14px;
-        }
-
-        /* FORMULARIO DE OPINIONES SIN BORDES */
-        .review-form {
-            background-color: transparent; 
-            border: none; 
-            padding: 10px 0;
-            text-align: left;
-            margin-top: 40px;
-        }
-        .review-form h4 {
-            color: #002b49;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .form-input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #e2e8f0;
-            background-color: #ffffff; 
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-family: inherit;
-        }
-        .btn-review {
-            background-color: #002b49;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .btn-review:hover {
-            background-color: #001a2c;
-        }
-
-        /* CONTENEDOR Y ESTILOS DE LOS BOTONES DE ACCIÓN */
-        .cta-container {
-            text-align: center;
-            margin-top: 45px; 
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap; /* Para que en celulares se acomoden uno abajo del otro */
-        }
-        .btn-cta {
-            display: inline-block; 
-            padding: 14px 35px; 
-            background-color: #c5a059; /* Dorado */
-            color: #ffffff; 
-            text-decoration: none; 
-            border-radius: 6px; 
-            font-weight: bold; 
-            font-size: 17px; 
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.25);
-            transition: all 0.3s ease;
-        }
-        .btn-cta:hover {
-            background-color: #aa8643; 
-            box-shadow: 0 6px 15px rgba(197, 160, 89, 0.35);
-            transform: translateY(-1px);
-        }
-        .btn-secondary {
-            background-color: #002b49; /* Azul Marino */
-            box-shadow: 0 4px 10px rgba(0, 43, 73, 0.25);
-        }
-        .btn-secondary:hover {
-            background-color: #001a2c;
-            box-shadow: 0 6px 15px rgba(0, 43, 73, 0.35);
         }
     </style>
 </head>
@@ -244,127 +122,88 @@
 
     <div class="container">
         
-        <!-- ENCABEZADO -->
         <div class="header-section">
-            <img src="Logo 1.png" alt="Logo de Consultoría Integral" class="logo">
-            <h1>Consultoría Integral Empresarial</h1>
-            <div class="subtitle">Construimos la estrategia que impulsa tu crecimiento.</div>
+            <h1>Nuestros Servicios</h1>
+            <div class="subtitle">Soluciones diseñadas para brindar seguridad y cumplimiento.</div>
         </div>
-        
-        <p class="welcome-text">
-            Somos el aliado estratégico de empresarios, emprendedores y personas que buscan crecer con seguridad y tomar mejores decisiones para su patrimonio y su negocio. 
-            <br><br>
-            Más que cumplir obligaciones contables y fiscales, nos enfocamos en comprender cada situación, anticipar riesgos y transformar la información en estrategias que generen valor, confianza y crecimiento.
+
+        <p class="intro-text">
+            Cada empresa enfrenta retos diferentes. Por eso ofrecemos soluciones personalizadas que van más allá del cumplimiento ordinario, ayudando a proteger tu patrimonio y optimizar tus recursos estratégicamente. Despliega cada categoría para conocer los servicios específicos y nuestros procesos de trabajo.
         </p>
 
-        <!-- SECCIÓN 1: ¿QUIÉNES SOMOS? -->
+        <!-- SERVICIO 1 -->
         <details>
-            <summary>¿Quiénes Somos? / Filosofía</summary>
+            <summary>Estrategia Contable y Fiscal</summary>
             <div class="content">
-                <h3>Más que un despacho</h3>
-                <p>Creemos que la contabilidad debe convertirse en una herramienta para crecer, no solo en una obligación por cumplir.</p>
-                <p>Por eso reunimos distintas áreas de especialidad para ofrecer soluciones integrales que permitan a nuestros clientes tomar mejores decisiones, prevenir riesgos y aprovechar nuevas oportunidades.</p>
-                <p>Trabajamos con personas, emprendedores y empresas de diferentes sectores, entendiendo que cada proyecto tiene objetivos, retos y necesidades propias.</p>
-                <p>Más que atender números, acompañamos proyectos de vida y negocios con la responsabilidad, cercanía y profesionalismo que cada cliente merece.</p>
-                <p>Creemos que detrás de cada empresa hay esfuerzo, sueños y personas que merecen un acompañamiento profesional, cercano y comprometido. Por eso trabajamos con ética, innovación y capacitación constante, ofreciendo soluciones que impulsan el presente y fortalecen el futuro.</p>
-            </div>
-        </details>
-
-        <!-- SECCIÓN 2: MISIÓN Y VISIÓN -->
-        <details>
-            <summary>Nuestra Misión y Visión</summary>
-            <div class="content">
-                <h3>Nuestra Misión</h3>
-                <p>Impulsar el crecimiento sostenible de nuestros clientes mediante soluciones contables, fiscales, financieras y jurídicas de alto nivel, transformando la información en estrategias que generen valor, seguridad y confianza.</p>
-                <p>Nos comprometemos a brindar un servicio cercano, ético, profesional e innovador, anticipándonos a los cambios para convertir cada desafío en una oportunidad de crecimiento.</p>
-                
-                <h3 style="margin-top: 25px;">Nuestra Visión</h3>
-                <p>Ser una de las firmas de consultoría empresarial más reconocidas de México por la confianza que inspiramos, la innovación de nuestras soluciones y el impacto positivo que generamos en el desarrollo de nuestros clientes.</p>
-                <p>Aspiramos a convertirnos en el referente nacional para quienes buscan un verdadero socio estratégico para su patrimonio, su empresa y su futuro.</p>
-            </div>
-        </details>
-
-        <!-- SECCIÓN 3: EXPERIENCIA -->
-        <details>
-            <summary>Experiencia que Inspira Confianza</summary>
-            <div class="content">
-                <h3>Ocho años construyendo resultados</h3>
-                <p>Creemos que la confianza no se promete, se construye con resultados. Durante más de 8 años de experiencia, hemos acompañado a emprendedores, profesionistas, empresas familiares y organizaciones de distintos sectores, entendiendo que cada cliente tiene necesidades, retos y objetivos únicos.</p>
-                <p>Nuestra filosofía es simple: hacer las cosas bien desde el principio. Actuamos con ética, profesionalismo y total compromiso, manteniéndonos en constante capacitación para ofrecer soluciones actualizadas, estratégicas y de alto valor.</p>
-                <p>Ocho años de experiencia nos han enseñado que los mejores negocios no se construyen solo con números, sino con confianza, compromiso y decisiones inteligentes. Esa es la diferencia que ofrecemos a cada cliente que deposita su confianza en nosotros.</p>
-            </div>
-        </details>
-
-        <!-- SECCIÓN 4: SOLUCIONES -->
-        <details>
-            <summary>Nuestras Soluciones Integrales</summary>
-            <div class="content">
-                <h3>Construimos soluciones. Generamos confianza.</h3>
-                <p>Cada empresa enfrenta retos diferentes. Por eso ofrecemos soluciones personalizadas que van más allá del cumplimiento, ayudando a proteger tu patrimonio, optimizar tus recursos y fortalecer el crecimiento de tu negocio.</p>
-                <p>Impulsamos el crecimiento de personas y empresas mediante soluciones diseñadas para brindar seguridad, cumplimiento y una mejor toma de decisiones:</p>
+                <h4>Servicios Específicos:</h4>
                 <ul>
-                    <li><strong>Estrategia Contable y Fiscal.</strong></li>
-                    <li><strong>Consultoría Financiera y Empresarial.</strong></li>
-                    <li><strong>Auditoría y Gestión de Riesgos.</strong></li>
-                    <li><strong>Asesoría Corporativa y Patrimonial.</strong></li>
-                    <li><strong>Capacitación Profesional.</strong></li>
+                    <li>Gestión, cálculo e interpretación de contabilidad general.</li>
+                    <li>Declaraciones de impuestos mensuales y anuales.</li>
+                    <li>Planeación y regularización fiscal ante autoridades.</li>
                 </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Analizamos el estado actual de tu negocio, diagnosticamos inconsistencias previas y estructuramos un calendario de cumplimiento óptimo y transparente.</p>
             </div>
         </details>
 
-        <!-- SECCIÓN 5: NUESTRO MANIFIESTO -->
+        <!-- SERVICIO 2 -->
         <details>
-            <summary>Nuestro Manifiesto</summary>
+            <summary>Consultoría Financiera y Empresarial</summary>
             <div class="content">
-                <p>Creemos en las empresas que sueñan en grande y en las decisiones que construyen su futuro.</p>
-                <p>Creemos que la confianza, la estrategia y el conocimiento son la base de un crecimiento sólido.</p>
-                <p>Y creemos que nuestro trabajo cobra sentido cuando ayudamos a nuestros clientes a avanzar con seguridad, tranquilidad y visión.</p>
-                <div class="manifiesto-box">
-                    <strong>Porque más que números, construimos confianza.</strong>
-                </div>
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Análisis de estados financieros para la toma de decisiones.</li>
+                    <li>Evaluación de rentabilidad y reducción de costos operativos.</li>
+                    <li>Proyecciones de crecimiento empresarial a corto y largo plazo.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Evaluamos tus flujos de efectivo e implementamos indicadores clave de rendimiento (KPIs) para asegurar que cada inversión maximice su valor.</p>
             </div>
         </details>
 
-        <!-- DOS BOTONES DE ENLACE PRINCIPALES -->
-        <div class="cta-container">
-            <a href="contacto.html" class="btn-cta">
-                Solicitar una Asesoría
-            </a>
-            <a href="cursos.html" class="btn-cta btn-secondary">
-                Ver Cursos y Capacitaciones
-            </a>
-        </div>
+        <!-- SERVICIO 3 -->
+        <details>
+            <summary>Auditoría y Gestión de Riesgos</summary>
+            <div class="content">
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Auditorías internas y preventivas de estados financieros.</li>
+                    <li>Identificación y mitigación de riesgos fiscales o legales.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Realizamos revisiones minuciosas de tus operaciones para detectar vulnerabilidades a tiempo, asegurando un blindaje total del patrimonio de tu negocio.</p>
+            </div>
+        </details>
 
-        <!-- SECCIÓN: TESTIMONIOS -->
-        <div class="section-title">La voz de quienes confían en nosotros</div>
+        <!-- SERVICIO 4 -->
+        <details>
+            <summary>Asesoría Corporativa y Patrimonial</summary>
+            <div class="content">
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Protección jurídica y legal de bienes patrimoniales.</li>
+                    <li>Estructuración corporativa de empresas familiares y sociedades.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Diseñamos vehículos legales y corporativos a la medida para garantizar la continuidad del negocio y el resguardo de tus activos a lo largo del tiempo.</p>
+            </div>
+        </details>
 
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"Excelente servicio. Gracias a su consultoría logramos estructurar nuestra estrategia fiscal de este año y la tranquilidad que te brindan no tiene precio. Totalmente profesionales."</p>
-            <div class="testimonial-author">— Director General, PyME del Sector Comercial</div>
-        </div>
+        <!-- SERVICIO 5 -->
+        <details>
+            <summary>Capacitación Profesional</summary>
+            <div class="content">
+                <h4>Servicios Específicos:</h4>
+                <ul>
+                    <li>Cursos especializados para personal de administración y finanzas.</li>
+                    <li>Actualización constante en reformas fiscales y normativas vigentes.</li>
+                </ul>
+                <h4>Nuestro Proceso:</h4>
+                <p>Impartimos talleres teórico-prácticos adaptados al giro comercial de tu empresa, asegurando que tu equipo cuente con las mejores herramientas operativas.</p>
+            </div>
+        </details>
 
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"Más que contadores, se convirtieron en aliados de mi negocio. Te explican todo con total claridad y cercanía."</p>
-            <div class="testimonial-author">— Emprendedora, Servicios Tecnológicos</div>
-        </div>
-
-        <!-- BUZÓN PARA RECIBIR NUEVAS RESEÑAS -->
-        <div class="review-form">
-            <h4>Comparta su experiencia con nosotros</h4>
-            <form action="#" method="POST">
-                <input type="text" class="form-input" placeholder="Su Nombre o Empresa" required>
-                <select class="form-input" required>
-                    <option value="">Seleccione su calificación</option>
-                    <option value="5">★★★★★ (Excelente)</option>
-                    <option value="4">★★★★ (Muy Bueno)</option>
-                    <option value="3">★★★ (Bueno)</option>
-                </select>
-                <textarea class="form-input" placeholder="Escriba su reseña aquí..." style="height: 80px; resize: vertical;" required></textarea>
-                <button type="submit" class="btn-review">Enviar Reseña</button>
-            </form>
-        </div>
+        <a href="índice.html" class="btn-back">← Volver al Inicio</a>
         
     </div>
 
