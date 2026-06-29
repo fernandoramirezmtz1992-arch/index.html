@@ -147,6 +147,18 @@
         }
     </style>
 </head>
+  /* Estado inicial: oculto y un poco abajo */
+.efecto-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado activo: visible y en su posición original */
+.efecto-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}  
 <body>
 
     <div class="container">
@@ -163,7 +175,7 @@
         <div class="services-grid">
 
             <!-- CUADRO 1 -->
-            <div class="service-card">
+            <div class="servicio efecto-scroll">
                 <img src="servicio1.jpg" alt="Estrategia Contable y Fiscal" class="service-image">
                 <div class="service-content">
                     <h3>Estrategia Contable y Fiscal</h3>
