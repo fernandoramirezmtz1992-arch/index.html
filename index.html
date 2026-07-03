@@ -5,174 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoría Integral Empresarial</title>
     <style>
-        /* Estilos generales y fondo estilo Lambrín de Madera Clara */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
+            font-family: 'Georgia', serif;
+            background-color: #3d2314;
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px),
+                linear-gradient(90deg, #4a2c1b, #351e11);
+            background-size: 4px 100%, 100% 20px, 100% 100%;
             margin: 0;
             padding: 0;
-            /* Simulación de listones verticales (lambrín) con gradientes lineales */
-            background: linear-gradient(90deg, #f7f5f0 0px, #f7f5f0 38px, #efebe3 39px, #efebe3 40px);
-            background-size: 40px 100%;
-            background-attachment: fixed;
-            position: relative;
+            color: #2d3748;
         }
-
-        /* El Búho como Marca de Agua Gigante en el fondo con animación */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 550px;  /* Tamaño grande y equilibrado */
-            height: 550px;
-            background-image: url('Logo 1.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.07; /* 7% de opacidad para que sea una marca de agua muy sutil */
-            z-index: -1;   /* Queda firmemente detrás de todo tu contenido y textos */
-            pointer-events: none;
-            animation: flotarBuho 6s ease-in-out infinite; /* Mantiene tu efecto de movimiento */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            text-align: center;
         }
-
-        /* Animación de balanceo/flotación sutil para el Búho de fondo */
-        @keyframes flotarBuho {
-            0% {
-                transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
-            }
-            50% {
-                transform: translate(-50%, -50%) translateY(-15px) rotate(1deg);
-            }
-            100% {
-                transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
-            }
-        }
-
-        /* Barra de Navegación */
         nav {
-            background-color: #2c3e50;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background-color: #1a202c;
+            padding: 15px 0;
+            text-align: center;
         }
-
-        nav .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        nav .logo-container img {
-            height: 45px;
-            object-fit: contain;
-        }
-
-        nav .logo-container span {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
-            display: flex;
-            gap: 2rem;
         }
-
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
         nav ul li a {
-            color: #ecf0f1;
+            color: #fff;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.2s ease;
+            font-weight: bold;
         }
-
         nav ul li a:hover {
-            color: #3498db;
+            color: #cbd5e0;
         }
-
-        /* Contenedor Principal de Bienvenida */
-        .hero-section {
-            max-width: 900px;
-            margin: 5rem auto;
-            padding: 3rem 2rem;
-            background-color: rgba(255, 255, 255, 0.92); /* Tarjeta translúcida premium */
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            text-align: center;
-            position: relative;
-            z-index: 1; /* Pasa elegantemente por encima del búho de fondo */
+        h2 {
+            color: #1a202c;
         }
-
-        .hero-section h2 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
         }
-
-        .hero-section p {
-            color: #555;
-            font-size: 1.15rem;
-            line-height: 1.7;
-            margin-bottom: 2.5rem;
-        }
-
-        /* Botón de Acción Principal */
         .cta-button {
             display: inline-block;
-            background-color: #3498db;
+            background-color: #2b6cb0;
             color: white;
+            padding: 12px 24px;
             text-decoration: none;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.05rem;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-            transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
         }
-
         .cta-button:hover {
-            background-color: #2980b9;
-            box-shadow: 0 6px 20px rgba(41, 128, 185, 0.4);
-            transform: translateY(-2px);
+            background-color: #2b6cb0;
         }
-
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        /* Pie de Página */
         footer {
             text-align: center;
-            padding: 2rem;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 1;
+            margin-top: 50px;
+            color: #718096;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
     <nav>
-        <div class="logo-container">
-            <img src="Logo 1.png" alt="Logo">
-            <span>Consultoría Integral</span>
-        </div>
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
@@ -180,14 +86,12 @@
         </ul>
     </nav>
 
-    <!-- SECCIÓN HERO PRINCIPAL -->
-    <main class="hero-section">
+    <div class="container">
         <h2>Soluciones Estratégicas para tu Empresa</h2>
         <p>Impulsamos el crecimiento y la seguridad de tu negocio a través de asesoría especializada en estrategia fiscal, control financiero, compliance y soluciones digitales con Inteligencia Artificial. Nuestro objetivo es brindarte la claridad y el respaldo normativo que necesitas para tomar decisiones rentables.</p>
         <a href="servicios.html" class="cta-button">Explorar Nuestros Servicios</a>
-    </main>
+    </div>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <p>&copy; 2026 Consultoría Integral Empresarial. Todos los derechos reservados.</p>
     </footer>
