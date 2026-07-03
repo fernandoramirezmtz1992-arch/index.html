@@ -5,28 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros Servicios</title>
     <style>
-        /* Estilos generales */
+        /* Estilos generales y fondo estilo Lambrín de Madera Clara */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
             color: #333;
             margin: 0;
             padding: 0;
+            /* Simulación de listones verticales (lambrín) con gradientes lineales */
+            background: linear-gradient(90deg, #f7f5f0 0px, #f7f5f0 38px, #efebe3 39px, #efebe3 40px);
+            background-size: 40px 100%;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        /* El Búho como Marca de Agua Gigante en el fondo */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;  /* Tamaño grande */
+            height: 600px;
+            background-image: url('Logo 1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.08; /* Súper transparente para que no estorbe la lectura */
+            z-index: -1;   /* Queda detrás de todo */
+            pointer-events: none;
         }
 
         header {
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 2.5rem 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        h1 {
+        header h1 {
             margin: 0;
             font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
-        /* Contenedor de la cuadrícula de servicios */
+        /* Contenedor de las tarjetas */
         .servicios-container {
             max-width: 1200px;
             margin: 3rem auto;
@@ -34,13 +59,16 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
+            position: relative;
+            z-index: 1; /* Pasa por encima del búho de fondo */
         }
 
         /* Tarjeta de cada servicio */
         .servicio-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background-color: rgba(255, 255, 255, 0.95); /* Blanco semi-translúcido premium */
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid rgba(255, 255, 255, 0.8);
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -49,7 +77,8 @@
 
         .servicio-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            background-color: #ffffff;
         }
 
         /* Estilos de la imagen */
@@ -62,65 +91,72 @@
 
         /* Contenido de la tarjeta */
         .servicio-info {
-            padding: 1.5rem;
+            padding: 1.8rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
         .servicio-info h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.4rem;
-            color: #2c3e50;
+            margin: 0 0 0.6rem 0;
+            font-size: 1.35rem;
+            color: #1a252f;
+            font-weight: 600;
         }
 
         .servicio-info p {
             margin: 0 0 1.5rem 0;
             font-size: 0.95rem;
-            color: #666;
-            line-height: 1.5;
+            color: #555;
+            line-height: 1.6;
         }
 
-        /* Botón Desplegable Avanzado (Details/Summary) */
+        /* Botón Desplegable */
         details {
             margin-top: auto;
         }
 
         summary {
-            list-style: none; /* Quita la flecha por defecto */
-            display: inline-block;
-            background-color: #3498db;
+            list-style: none;
+            display: block;
+            background-color: #2c3e50;
             color: white;
-            padding: 0.6rem 1.3rem;
-            border-radius: 5px;
+            padding: 0.7rem 1.3rem;
+            border-radius: 6px;
             font-weight: 600;
             font-size: 0.9rem;
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            transition: background-color 0.2s ease, transform 0.1s ease;
             text-align: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
         }
 
         summary:hover {
-            background-color: #2980b9;
+            background-color: #34495e;
+        }
+
+        summary:active {
+            transform: scale(0.98);
         }
 
         summary::-webkit-details-marker {
-            display: none; /* Quita la flecha en Safari */
+            display: none;
         }
 
         /* Lista que aparece al desplegar */
         .lista-desplegada {
-            margin-top: 1rem;
+            margin-top: 1.2rem;
             padding-left: 1.2rem;
-            border-top: 1px solid #eee;
-            padding-top: 1rem;
+            border-top: 1px solid #eef0f2;
+            padding-top: 1.2rem;
         }
 
         .lista-desplegada li {
             font-size: 0.9rem;
             color: #444;
-            margin-bottom: 0.5rem;
-            line-height: 1.4;
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+            list-style-type: square;
         }
     </style>
 </head>
@@ -253,7 +289,7 @@
                         <li>Capacitación en prevención de lavado de dinero.</li>
                         <li>Cursos de estados financieros e interpretación.</li>
                         <li>Talleres de flujo de efectivo y finanzas empresariales.</li>
-                        <li>Capacitación en obligaciones patronales.</li>
+                        <li>Capacitación en obligations patronales.</li>
                         <li>Formación en cumplimiento normativo.</li>
                         <li>Capacitación en herramientas digitales e IA.</li>
                         <li>Diseño de programas internos de formación profesional.</li>
