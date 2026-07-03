@@ -5,96 +5,420 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoría Integral Empresarial</title>
     <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #3d2314;
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: #3d2314; 
             background-image: 
                 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
                 linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px),
                 linear-gradient(90deg, #4a2c1b, #351e11);
             background-size: 4px 100%, 100% 20px, 100% 100%;
-            margin: 0;
-            padding: 0;
-            color: #2d3748;
+            margin: 0; 
+            padding: 0; 
+            color: #2d3748; 
         }
         .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            text-align: center;
+            max-width: 800px; 
+            margin: 50px auto; 
+            padding: 40px; 
+            background-color: #fcfaf2; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
         }
-        nav {
-            background-color: #1a202c;
-            padding: 15px 0;
-            text-align: center;
+        
+        .header-section {
+            text-align: left; 
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
         }
-        nav ul {
-            list-style: none;
+        .logo {
+            max-width: 180px; 
+            height: auto; 
+            margin-bottom: 15px;
+            display: block;
+        }
+        h1 { 
+            color: #002b49; 
+            font-size: 32px;
+            margin: 0 0 5px 0;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            color: #c5a059; 
+            font-size: 18px;
+            font-weight: bold;
             margin: 0;
-            padding: 0;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
+
+        .welcome-text { 
+            font-size: 18px; 
+            color: #4a5568; 
+            line-height: 1.8; 
+            text-align: justify; 
+            margin-bottom: 40px;
         }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
+        
+        details {
+            background-color: #ffffff; 
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 18px;
+            text-align: left;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        details:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        details[open] {
+            border-color: #c5a059; 
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.12);
+            transform: translateY(0);
+        }
+        summary {
+            font-size: 19px;
             font-weight: bold;
+            color: #002b49; 
+            cursor: pointer;
+            outline: none;
+            list-style: none; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav ul li a:hover {
-            color: #cbd5e0;
+        summary::-webkit-details-marker {
+            display: none;
         }
-        h2 {
-            color: #1a202c;
+        summary::after {
+            content: "➕";
+            font-size: 13px;
+            color: #c5a059;
+            transition: transform 0.4s ease;
         }
-        p {
-            line-height: 1.6;
-            font-size: 1.1em;
+        details[open] summary::after {
+            transform: rotate(180deg);
+            content: "➖";
         }
-        .cta-button {
-            display: inline-block;
-            background-color: #2b6cb0;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
+
+        .content {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.8;
+            text-align: justify;
+            animation: fadelnSuave 0.5s ease-out forwards;
+        }
+        @keyframes fadelnSuave {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content h3 {
+            color: #002b49;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .manifiesto-box {
+            font-style: italic;
+            border-left: 3px solid #c5a059;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #3182ce;
+        }
+
+        .profile-title {
+            color: #002b49;
+            font-size: 20px;
             font-weight: bold;
-            margin-top: 20px;
+            margin-bottom: 5px;
         }
-        .cta-button:hover {
-            background-color: #2b6cb0;
+        .profile-subtitle {
+            color: #c5a059;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
-        footer {
-            text-align: center;
+
+        .section-title {
+            color: #002b49;
+            font-size: 24px;
             margin-top: 50px;
-            color: #718096;
-            font-size: 0.9em;
+            margin-bottom: 25px;
+            font-weight: bold;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+            text-align: left;
         }
-    </style>
+        .testimonial-card {
+            background-color: #ffffff;
+            border-left: 4px solid #c5a059;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.01) translateX(3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        .stars {
+            color: #c5a059;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: #4a5568;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #002b49;
+            font-size: 14px;
+        }
+
+        .review-form {
+            background-color: transparent; 
+            border: none; 
+            padding: 10px 0;
+            text-align: left;
+            margin-top: 40px;
+        }
+        .review-form h4 {
+            color: #002b49;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            background-color: #ffffff; 
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #c5a059;
+        }
+        .btn-review {
+            background-color: #002b49;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-review:hover {
+            background-color: #001a2c;
+            transform: translateY(-1px);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 45px; 
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap; 
+        }
+        .btn-cta {
+            display: inline-block; 
+            padding: 14px 28px; 
+            background-color: #c5a059; 
+            color: #ffffff; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            font-size: 16px; 
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.25);
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .btn-cta:hover {
+            background-color: #aa8643; 
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
+            transform: translateY(-3px);
+        }
+        .btn-secondary {
+            background-color: #002b49; 
+            box-shadow: 0 4px 10px rgba(0, 43, 73, 0.25);
+        }
+        .btn-secondary:hover {
+            background-color: #001a2c;
+            box-shadow: 0 8px 20px rgba(0, 43, 73, 0.4);
+        }
+   </style>
+
+<style>
+/* Estilo base para el escudo del búho */
+.escudo-buho {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.escudo-buho:hover {
+    transform: scale(1.1) translateY(-5px);
+    filter: drop-shadow(0px 10px 15px rgba(197, 160, 89, 0.4));
+}
+
+/* Efecto al hacer clic */
+.escudo-buho:active {
+    transform: scale(0.95);
+}
+</style> 
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
-        <h2>Soluciones Estratégicas para tu Empresa</h2>
-        <p>Impulsamos el crecimiento y la seguridad de tu negocio a través de asesoría especializada en estrategia fiscal, control financiero, compliance y soluciones digitales con Inteligencia Artificial. Nuestro objetivo es brindarte la claridad y el respaldo normativo que necesitas para tomar decisiones rentables.</p>
-        <a href="servicios.html" class="cta-button">Explorar Nuestros Servicios</a>
-    </div>
+        
+        <div class="header-section">
+<video src="Imagenes/41ded87cbc874a828bf0316f2ac70413.mp4" autoplay muted loop class="logo escudo-buho"></video>
+            <h1>Consultoría Integral Empresarial</h1>
+            <div class="subtitle">Construimos la estrategia que impulsa tu crecimiento.</div>
+        </div>
+        
+        <p class="welcome-text">
+            Somos el aliado estratégico de empresarios, emprendedores y personas que buscan crecer con seguridad y tomar mejores decisiones para su patrimonio y su negocio. 
+            <br><br>
+            Más que cumplir obligaciones contables y fiscales, nos enfocamos en comprender cada situación, anticipar riesgos y transformar la información en estrategias que generen valor, confianza y crecimiento.
+        </p>
 
-    <footer>
-        <p>&copy; 2026 Consultoría Integral Empresarial. Todos los derechos reservados.</p>
-    </footer>
+        <!-- SECCIÓN 1: ¿QUIÉNES SOMOS? -->
+        <details>
+            <summary>¿Quiénes Somos? / Filosofía</summary>
+            <div class="content">
+                <h3>Más que un despacho</h3>
+                <p>Creemos que la contabilidad debe convertirse en una herramienta para crecer, no solo en una obligación por cumplir.</p>
+                <p>Por eso reunimos distintas áreas de especialidad para ofrecer soluciones integrales que permitan a nuestros clientes tomar mejores decisiones, prevenir riesgos y aprovechar nuevas oportunidades.</p>
+                <p>Trabajamos con personas, emprendedores y empresas de diferentes sectores, entendiendo que cada proyecto tiene objetivos, retos y necesidades propias.</p>
+                <p>Más que atender números, acompañamos proyectos de vida y negocios con la responsabilidad, cercanía y profesionalismo que cada cliente merece.</p>
+                <p>Creemos que detrás de cada empresa hay esfuerzo, sueños y personas que merecen un acompañamiento profesional, cercano y comprometido. Por eso trabajamos con ética, innovación y capacitación constante, ofreciendo soluciones que impulsan el presente y fortalecen el futuro.</p>
+            </div>
+        </details>
+
+        <!-- SECCIÓN 2: MISIÓN Y VISIÓN -->
+        <details>
+            <summary>Nuestra Misión y Visión</summary>
+            <div class="content">
+                <h3>Nuestra Misión</h3>
+                <p>Impulsar el crecimiento sostenible de nuestros clientes mediante soluciones contables, fiscales, financieras y jurídicas de alto nivel, transformando la información en estrategias que generen valor, seguridad y confianza.</p>
+                <p>Nos comprometemos a brindar un servicio cercano, ético, profesional e innovador, anticipándonos a los cambios para convertir cada desafío en una oportunidad de crecimiento.</p>
+                
+                <h3 style="margin-top: 25px;">Nuestra Visión</h3>
+                <p>Ser una de las firmas de consultoría empresarial más reconocidas de México por la confianza que inspiramos, la innovación de nuestras soluciones y el impacto positivo que generamos en el desarrollo de nuestros clientes.</p>
+                <p>Aspiramos a convertirnos en el referente nacional para quienes buscan un verdadero socio estratégico para su patrimonio, su empresa y su futuro.</p>
+            </div>
+        </details>
+
+        <!-- SECCIÓN 3: EXPERIENCIA -->
+        <details>
+            <summary>Experiencia que Inspira Confianza</summary>
+            <div class="content">
+                <h3>Ocho años construyendo resultados</h3>
+                <p>Creemos que la confianza no se promete, se construye con resultados. Durante más de 8 años de experiencia, hemos acompañado a emprendedores, profesionistas, empresas familiares y organizaciones de distintos sectores, entendiendo que cada cliente tiene necesidades, retos y objetivos únicos.</p>
+                <p>Nuestra filosofía es simple: hacer las cosas bien desde el principio. Actuamos con ética, profesionalismo y total compromiso, manteniéndonos en constante capacitación para ofrecer soluciones actualizadas, estratégicas y de alto valor.</p>
+                <p>Ocho años de experiencia nos han enseñado que los mejores negocios no se construyen solo con números, sino con confianza, compromiso y decisiones inteligentes. Esa es la diferencia que ofrecemos a cada cliente que deposita su confianza en nosotros.</p>
+            </div>
+        </details>
+
+        <!-- SECCIÓN 4: NUESTRO MANIFIESTO -->
+        <details>
+            <summary>Nuestro Manifiesto</summary>
+            <div class="content">
+                <p>Creemos en las empresas que sueñan en grande y en las decisiones que construyen su futuro.</p>
+                <p>Creemos que la confianza, la estrategia y el conocimiento son la base de un crecimiento sólido.</p>
+                <p>Y creemos que nuestro trabajo cobra sentido cuando ayudamos a nuestros clientes a avanzar con seguridad, tranquilidad y visión.</p>
+                <div class="manifiesto-box">
+                    <strong>Porque más que números, construimos confianza.</strong>
+                </div>
+            </div>
+        </details>
+
+        <!-- SECCIÓN 5: LIDERAZGO ESTRATÉGICO -->
+        <details>
+            <summary>Liderazgo Estratégico</summary>
+            <div class="content">
+                <div class="profile-title">Fernando Ramírez Martínez</div>
+                <div class="profile-subtitle">Director General &amp; Consultor Patrimonial</div>
+                <p>Con más de 8 años de trayectoria liderando estrategias financieras y corporativas, fundé este espacio bajo una premisa inquebrantable: los mejores negocios y patrimonios no se administran solo con números, sino con decisiones inteligentes, visión preventiva y absoluta confianza.</p>
+                <p>Mi enfoque se centra en transformar la complejidad contable y fiscal en planes de crecimiento claros, sólidos y completamente blindados para empresarios y emprendedores que buscan trascender con seguridad.</p>
+            </div>
+        </details>
+
+        <!-- SECCIÓN 6: NUESTRO EQUIPO -->
+        <details>
+            <summary>Te Presento al Equipo</summary>
+            <div class="content">
+                <h3>El valor de la especialización</h3>
+                <p>Detrás de cada estrategia exitosa hay un equipo multidisciplinario firmemente comprometido con tus objetivos. Contamos con especialistas de alto nivel en las áreas contable, fiscal, financiera y jurídica.</p>
+                <p>Nuestra sinergia nos permite analizar tu negocio desde todas las perspectivas posibles, anticipando riesgos regulatorios y optimizando tus recursos con la ética, innovación y cercanía que nos caracteriza.</p>
+            </div>
+        </details>
+
+        <div class="cta-container">
+            <a href="contacto.html" class="btn-cta">
+                Solicitar una Asesoría
+            </a>
+            <a href="servicios.html" class="btn-cta btn-secondary">
+                Nuestros Servicios
+            </a>
+            <a href="cursos.html" class="btn-cta btn-secondary">
+                Ver Cursos
+            </a>
+        </div>
+
+        <div class="section-title">La voz de quienes confían en nosotros</div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Excelente servicio. Gracias a su consultoría logramos estructurar nuestra estrategia fiscal de este año y la tranquilidad que te brindan no tiene precio. Totalmente profesionales."</p>
+            <div class="testimonial-author">— Director General, PyME del Sector Comercial</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Más que contadores, se convirtieron en aliados de mi negocio. Te explican todo con total claridad y cercanía."</p>
+            <div class="testimonial-author">— Emprendedora, Servicios Tecnológicos</div>
+        </div>
+
+        <div class="review-form">
+            <h4>Comparta su experiencia con nosotros</h4>
+            <form action="#" method="POST">
+                <input type="text" class="form-input" placeholder="Su Nombre o Empresa" required>
+                <select class="form-input" required>
+                    <option value="">Seleccione su calificación</option>
+                    <option value="5">★★★★★ (Excelente)</option>
+                    <option value="4">★★★★ (Muy Bueno)</option>
+                    <option value="3">★★★ (Bueno)</option>
+                </select>
+                <textarea class="form-input" placeholder="Escriba su reseña aquí..." style="height: 80px; resize: vertical;" required></textarea>
+                <button type="submit" class="btn-review">Enviar Reseña</button>
+            </form>
+        </div>
+        
+    </div>
 
 </body>
 </html>
