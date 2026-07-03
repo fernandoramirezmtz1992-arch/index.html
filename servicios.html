@@ -79,24 +79,48 @@
             font-size: 0.95rem;
             color: #666;
             line-height: 1.5;
-            flex-grow: 1;
         }
 
-        /* Botón */
-        .boton-ver-mas {
-            align-self: flex-start;
+        /* Botón Desplegable Avanzado (Details/Summary) */
+        details {
+            margin-top: auto;
+        }
+
+        summary {
+            list-style: none; /* Quita la flecha por defecto */
+            display: inline-block;
             background-color: #3498db;
             color: white;
-            text-decoration: none;
             padding: 0.6rem 1.3rem;
             border-radius: 5px;
             font-weight: 600;
             font-size: 0.9rem;
+            cursor: pointer;
             transition: background-color 0.2s ease;
+            text-align: center;
         }
 
-        .boton-ver-mas:hover {
+        summary:hover {
             background-color: #2980b9;
+        }
+
+        summary::-webkit-details-marker {
+            display: none; /* Quita la flecha en Safari */
+        }
+
+        /* Lista que aparece al desplegar */
+        .lista-desplegada {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .lista-desplegada li {
+            font-size: 0.9rem;
+            color: #444;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -110,101 +134,191 @@
         
         <!-- SERVICIO 1 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/01A.png" alt="Servicio 01A">
+            <img src="imagenes-servicios/01A.png" alt="Estrategia Contable y Fiscal">
             <div class="servicio-info">
-                <h3>Servicio 1</h3>
-                <p>Tu sinopsis real del servicio 1 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Estrategia Contable y Fiscal</h3>
+                <p>Optimizamos el cumplimiento tributario de tu empresa mediante un diseño e implementación de estrategias legales enfocadas en mitigar riesgos y maximizar beneficios financieros.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Cálculo y presentación de impuestos mensuales y anuales.</li>
+                        <li>Contabilidad electrónica integral y estados financieros.</li>
+                        <li>Planeación fiscal estratégica preventiva.</li>
+                        <li>Atención y asesoría ante auditorías del SAT.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 2 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/02B.png" alt="Servicio 02B">
+            <img src="imagenes-servicios/02B.png" alt="Consultoría Financiera">
             <div class="servicio-info">
-                <h3>Servicio 2</h3>
-                <p>Tu sinopsis real del servicio 2 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Consultoría Financiera</h3>
+                <p>Te ayudamos a tomar el control económico de tu negocio, analizando la estructura de tus costos y proyecciones para asegurar la toma de decisiones informada y rentable.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Análisis de viabilidad financiera y flujos de efectivo.</li>
+                        <li>Evaluación de presupuestos y reducción de costos operativos.</li>
+                        <li>Reestructuración de deudas y apalancamiento estratégico.</li>
+                        <li>Valuación de empresas y proyectos de inversión.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 3 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/03C.png" alt="Servicio 03C">
+            <img src="imagenes-servicios/03C.png" alt="Auditoría y Riesgos">
             <div class="servicio-info">
-                <h3>Servicio 3</h3>
-                <p>Tu sinopsis real del servicio 3 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Auditoría y Riesgos</h3>
+                <p>Evaluamos con total transparencia los controles internos de tu organización, identificando áreas críticas para prevenir fraudes, pérdidas y asegurar el orden institucional.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Auditoría de estados financieros y de gestión operativa.</li>
+                        <li>Evaluación y diagnóstico de control interno corporativo.</li>
+                        <li>Detección, mitigación y mapeo de riesgos financieros.</li>
+                        <li>Auditorías fiscales y de cumplimiento de cuotas de seguridad social.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 4 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/04D.png" alt="Servicio 04D">
+            <img src="imagenes-servicios/04D.png" alt="Asesoría Corporativa">
             <div class="servicio-info">
-                <h3>Servicio 4</h3>
-                <p>Tu sinopsis real del servicio 4 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Asesoría Corporativa</h3>
+                <p>Brindamos acompañamiento estratégico en la estructuración legal y operativa de tu empresa para fortalecer su gobierno corporativo y proteger su patrimonio.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Constitución de sociedades mercantiles y civiles.</li>
+                        <li>Elaboración, revisión y blindaje de contratos comerciales.</li>
+                        <li>Diseño de estructuras de Gobierno Corporativo.</li>
+                        <li>Asesoría integral en actas de asamblea y convenios de socios.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 5 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/05E.png" alt="Servicio 05E">
+            <img src="imagenes-servicios/05E.png" alt="Capacitación Profesional">
             <div class="servicio-info">
-                <h3>Servicio 5</h3>
-                <p>Tu sinopsis real del servicio 5 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Capacitación Profesional</h3>
+                <p>Impulsamos el talento de tu equipo de trabajo mediante programas formativos actualizados en materia fiscal, contable, legal y de herramientas directivas.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Cursos prácticos de actualización fiscal y reformas vigentes.</li>
+                        <li>Talleres de interpretación de estados financieros para directores.</li>
+                        <li>Capacitación personalizada sobre control interno para equipos de administración.</li>
+                        <li>Seminarios presenciales y online de desarrollo empresarial.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 6 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/06F.png" alt="Servicio 06F">
+            <img src="imagenes-servicios/06F.png" alt="Eficiencia Digital e IA">
             <div class="servicio-info">
-                <h3>Servicio 6</h3>
-                <p>Tu sinopsis real del servicio 6 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Eficiencia Digital e IA</h3>
+                <p>Modernizamos tu administración integrando software especializado, automatizaciones e Inteligencia Artificial para eliminar tareas manuales y optimizar el tiempo.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Implementación de sistemas ERP y automatización contable.</li>
+                        <li>Integración de Inteligencia Artificial para análisis de reportes financieros.</li>
+                        <li>Digitalización de flujos de trabajo y procesos operativos de oficina.</li>
+                        <li>Consultoría en transformación digital y migración a la nube segura.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 7 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/07G.png" alt="Servicio 07G">
+            <img src="imagenes-servicios/07G.png" alt="Compliance y PLD">
             <div class="servicio-info">
-                <h3>Servicio 7</h3>
-                <p>Tu sinopsis real del servicio 7 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Compliance y PLD</h3>
+                <p>Protegemos la integridad de tu empresa mediante la implementación de manuales y auditorías rigurosas para la Prevención de Lavado de Dinero y Financiamiento al Terrorismo.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Elaboración de manuales de políticas y procedimientos de PLD.</li>
+                        <li>Identificación y reporteo de Actividades Vulnerables ante la autoridad.</li>
+                        <li>Auditorías periódicas de cumplimiento normativo en PLD.</li>
+                        <li>Capacitación obligatoria al Oficial de Cumplimiento y personal clave.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 8 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/08H.png" alt="Servicio 08H">
+            <img src="imagenes-servicios/08H.png" alt="Fusiones y Adquisiciones">
             <div class="servicio-info">
-                <h3>Servicio 8</h3>
-                <p>Tu sinopsis real del servicio 8 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Fusiones y Adquisiciones</h3>
+                <p>Acompañamos procesos de compra, venta o fusión de negocios, encargándonos de las auditorías de compra (Due Diligence) para asegurar transacciones exitosas.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Auditorías operativas, fiscales y financieras de compra (Due Diligence).</li>
+                        <li>Estructuración legal y fiscal de fusiones y escisiones.</li>
+                        <li>Asesoría en valuación comercial y de activos estratégicos.</li>
+                        <li>Negociación, mediación y cierre de contratos de compraventa.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 9 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/09I.png" alt="Servicio 09I">
+            <img src="imagenes-servicios/09I.png" alt="Cumplimiento Normativo">
             <div class="servicio-info">
-                <h3>Servicio 9</h3>
-                <p>Tu sinopsis real del servicio 9 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Cumplimiento Normativo</h3>
+                <p>Garantizamos que tu negocio opere bajo el marco legal correspondiente, supervisando de manera puntual las regulaciones laborales, sectoriales y de protección de datos.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Auditoría y cumplimiento en materia de subcontratación laboral (REPSE).</li>
+                        <li>Implementación de políticas de Protección de Datos Personales (ARCO).</li>
+                        <li>Monitoreo de obligaciones ante dependencias locales y federales.</li>
+                        <li>Alineación corporativa a las normativas de salud e higiene vigentes.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- SERVICIO 10 -->
         <div class="servicio-card">
-            <img src="imagenes-servicios/10J.png" alt="Servicio 10J">
+            <img src="imagenes-servicios/10J.png" alt="Defensa Fiscal">
             <div class="servicio-info">
-                <h3>Servicio 10</h3>
-                <p>Tu sinopsis real del servicio 10 va aquí de manera breve.</p>
-                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+                <h3>Defensa Fiscal</h3>
+                <p>Protegemos jurídicamente los derechos de tu empresa frente a actos arbitrarios o resoluciones desfavorables de las autoridades fiscales mediante medios de defensa legales.</p>
+                
+                <details>
+                    <summary>Ver servicios</summary>
+                    <ul class="lista-desplegada">
+                        <li>Elaboración e interposición de Recursos de Revocación.</li>
+                        <li>Juicios de Nulidad ante el Tribunal Federal de Justicia Administrativa.</li>
+                        <li>Juicios de Amparo contra leyes fiscales inconstitucionales.</li>
+                        <li>Atención especializada y desvirtuación de requerimientos o multas.</li>
+                    </ul>
+                </details>
             </div>
         </div>
 
