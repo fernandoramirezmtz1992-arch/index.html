@@ -72,9 +72,18 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
-        details[open] {
-            border-color: #c5a059; 
-            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.12);
+      details[open] {
+    border-color: #c5a059;
+    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.12);
+    transform: translateY(0);
+    /* Logo del búho de fondo cuando se abre */
+    background-image: url('Logo 1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: rgba(252, 250, 242, 0.94); 
+    background-blend-mode: overlay;
+}
             transform: translateY(0);
         }
         summary {
