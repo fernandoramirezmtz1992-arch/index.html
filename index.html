@@ -428,6 +428,37 @@
         </div>
         
     </div>
+<script>
+        document.querySelector('.review-form form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue
 
+            // 1. Obtener los valores que escribió el usuario
+            const nombre = document.querySelectorAll('.form-input')[0].value;
+            const estrellasCantidad = document.querySelectorAll('.form-input')[1].value;
+            const resenaTexto = document.querySelectorAll('.form-input')[2].value;
+
+            // 2. Convertir el número seleccionado en caracteres de estrellas ★
+            let estrellasVisuales = '';
+            for (let i = 0; i < estrellasCantidad; i++) {
+                estrellasVisuales += '★';
+            }
+
+            // 3. Crear la estructura exacta de tu "testimonial-card"
+            const nuevaTarjeta = document.createElement('div');
+            nuevaTarjeta.className = 'testimonial-card';
+            nuevaTarjeta.innerHTML = `
+                <div class="stars">${estrellasVisuales}</div>
+                <p class="testimonial-text">"${resenaTexto}"</p>
+                <div class="testimonial-author">— ${nombre}</div>
+            `;
+
+            // 4. Insertar la nueva opinión justo arriba del formulario
+            const contenedorFormulario = document.querySelector('.review-form');
+            contenedorFormulario.parentNode.insertBefore(nuevaTarjeta, contenedorFormulario);
+
+            // 5. Limpiar el formulario para el siguiente comentario
+            this.reset();
+        });
+    </script>
 </body>
 </html>
