@@ -3,512 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Servicios - Consultoría Integral</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Nuestros Servicios</title>
     <style>
-        /* Estilos Base y Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
+        /* Estilos generales */
         body {
-            background-color: #3d2314; 
-            background-image: linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px), linear-gradient(90deg, #4a2c1b, #351e11);
-            background-size: 4px 100%, 100% 20px, 100% 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
             margin: 0;
             padding: 0;
-            color: #2d3748;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 40px;
-            background-color: #fcfaf2;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        .header-section {
-            text-align: left;
-            margin-bottom: 35px;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 20px;
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
         }
 
         h1 {
-            color: #002b49;
-            font-size: 32px;
-            margin: 0 0 5px 0;
-        }
-
-        .subtitle {
-            color: #c5a059;
-            font-size: 18px;
-            font-weight: bold;
             margin: 0;
+            font-size: 2.5rem;
         }
 
-        /* NUEVA Sección de Introducción: Contenedor limpio de dos columnas */
-        .intro-container-new {
-            background: #141a26;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 60px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            gap: 0;
-        }
-
-        .intro-text-side {
-            flex: 1.2;
-            padding: 45px;
-        }
-
-        .intro-text-side p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            color: #e2e8f0;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        .intro-text-side p:first-child {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #ffffff;
-            border-left: 4px solid #c5a059;
-            padding-left: 15px;
-        }
-
-        .intro-text-side p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Lado de la imagen configurado para lucirla al máximo */
-        .intro-image-side {
-            flex: 1;
-            align-self: stretch; /* Hace que ocupe todo el alto disponible */
-            display: flex;
-        }
-
-        .intro-image-side img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ajusta la imagen elegantemente al espacio sin deformarla */
-            display: block;
-        }
-
-        /* Título de la Sección de Servicios */
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: #002b49;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #c5a059;
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Cuadrícula de Servicios (Grid de Cuadritos) */
-        .services-grid {
+        /* Contenedor de la cuadrícula de servicios */
+        .servicios-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
-        .service-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
+        /* Tarjeta de cada servicio */
+        .servicio-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
-            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .service-card:hover {
+        .servicio-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.15);
-            border-color: #c5a059;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
-        .service-img-container {
+        /* Estilos de la imagen */
+        .servicio-card img {
             width: 100%;
-            height: 200px;
-            overflow: hidden;
-            background-color: #eaeaea;
-        }
-
-        .service-img-container img {
-            width: 100%;
-            height: 100%;
+            height: 220px;
             object-fit: cover;
+            display: block;
         }
 
-        .service-body {
-            padding: 25px;
+        /* Contenido de la tarjeta */
+        .servicio-info {
+            padding: 1.5rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
-        .service-body h3 {
-            font-size: 1.35rem;
-            color: #002b49;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #f1f5f9;
-            padding-bottom: 10px;
+        .servicio-info h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.4rem;
+            color: #2c3e50;
         }
 
-        .service-enfoque {
-            font-style: italic;
-            color: #4a5568;
+        .servicio-info p {
+            margin: 0 0 1.5rem 0;
             font-size: 0.95rem;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #edf2f7;
-        }
-
-        .service-list {
-            list-style: none;
-            margin-top: auto;
-        }
-
-        .service-list li {
-            font-size: 0.9rem;
-            color: #4a5568;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
+            color: #666;
             line-height: 1.5;
+            flex-grow: 1;
         }
 
-        .service-list li i {
-            color: #c5a059;
-            margin-right: 10px;
-            margin-top: 4px;
-            font-size: 0.8rem;
-        }
-
-        .btn-back {
-            display: inline-block;
-            margin-top: 20px;
-            color: #002b49;
+        /* Botón */
+        .boton-ver-mas {
+            align-self: flex-start;
+            background-color: #3498db;
+            color: white;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            text-align: center;
+            padding: 0.6rem 1.3rem;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
         }
 
-        .btn-back:hover {
-            color: #c5a059;
-            transform: translateX(-3px);
-        }
-
-        /* Responsivo (Celulares y Tablets) */
-        @media (max-width: 900px) {
-            .intro-container-new {
-                flex-direction: column;
-            }
-            .intro-image-side {
-                width: 100%;
-                height: 300px;
-            }
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-                margin: 20px auto;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+        .boton-ver-mas:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <header>
+        <h1>Nuestros Servicios</h1>
+    </header>
+
+    <main class="servicios-container">
         
-        <!-- Encabezado Base -->
-        <div class="header-section">
-            <h1>Nuestros Servicios</h1>
-            <div class="subtitle">Soluciones diseñadas para brindar seguridad y cumplimiento.</div>
-        </div>
-        
-        <!-- SECCIÓN INTRODUCTORIA MEJORADA: Imagen limpia al lado del texto -->
-        <section class="intro-container-new">
-            
-            <!-- Columna de Texto -->
-            <div class="intro-text-side">
-                <p>Las empresas no necesitan únicamente quien les diga cuánto pagar, qué registrar o qué presentar. Necesitan aliados capaces de entender su operación, anticipar sus riesgos y convertir la información contable, fiscal, financiera y legal en decisiones inteligentes.</p>
-                <p>Nuestra firma nace precisamente de esa visión: acompañar a las empresas con una asesoría integral, técnica y estratégica, donde cada servicio contribuya al orden, la protección patrimonial, el cumplimiento y el crecimiento sostenible.</p>
-                <p>No trabajamos desde la reacción, sino desde la prevención. No vemos documentos aislados, vemos estructuras. No analizamos cifras sueltas, interpretamos el negocio. Y no ofrecemos respuestas genéricas, diseñamos soluciones con fundamento, visión profesional y sentido empresarial.</p>
+        <!-- SERVICIO 1 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/01A.png" alt="Servicio 01A">
+            <div class="servicio-info">
+                <h3>Servicio 1</h3>
+                <p>Tu sinopsis real del servicio 1 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
             </div>
-
-            <!-- Columna de la Imagen 000.png -->
-            <div class="intro-image-side">
-                <img src="./imagenes-servicios/000.png" alt="Aliado Estratégico Empresarial">
-            </div>
-
-        </section>
-
-        <h2 class="section-title">Servicios por Área</h2>
-
-        <!-- Cuadrícula de Servicios Nuevos -->
-        <div class="services-grid">
-
-            <!-- 1. Estrategia Contable y Fiscal -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/01A.png" alt="Estrategia Contable y Fiscal">
-                </div>
-                <div class="service-body">
-                    <h3>Estrategia Contable y Fiscal</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Convertimos la contabilidad y los impuestos en herramientas de dirección, no solo de cumplimiento.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Diagnóstico contable y fiscal integral.</li>
-                        <li><i class="fas fa-check"></i> Revisión de registros contables, ingresos, costos, gastos y deducciones.</li>
-                        <li><i class="fas fa-check"></i> Planeación fiscal con soporte documental y normativo.</li>
-                        <li><i class="fas fa-check"></i> Análisis de obligaciones fiscales mensuales y anuales.</li>
-                        <li><i class="fas fa-check"></i> Revisión de CFDI, complementos de pago y conciliaciones.</li>
-                        <li><i class="fas fa-check"></i> Regularización de declaraciones, pagos provisionales y obligaciones pendientes.</li>
-                        <li><i class="fas fa-check"></i> Integración de papeles de trabajo fiscales.</li>
-                        <li><i class="fas fa-check"></i> Evaluación de riesgos por ingresos no identificados, anticipos, préstamos o aportaciones.</li>
-                        <li><i class="fas fa-check"></i> Implementación de políticas contables y fiscales.</li>
-                        <li><i class="fas fa-check"></i> Acompañamiento en cierres contables y fiscales.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 2. Consultoría Financiera -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/02A.png" alt="Consultoría Financiera">
-                </div>
-                <div class="service-body">
-                    <h3>Consultoría Financiera</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Damos claridad financiera para tomar mejores decisiones, cuidar el flujo y proyectar el crecimiento.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Análisis de estados financieros.</li>
-                        <li><i class="fas fa-check"></i> Diagnóstico de liquidez, rentabilidad y endeudamiento.</li>
-                        <li><i class="fas fa-check"></i> Proyecciones financieras y escenarios.</li>
-                        <li><i class="fas fa-check"></i> Flujo de efectivo proyectado.</li>
-                        <li><i class="fas fa-check"></i> Análisis de costos, márgenes y punto de equilibrio.</li>
-                        <li><i class="fas fa-check"></i> Evaluación de cuentas por cobrar y recuperación de cartera.</li>
-                        <li><i class="fas fa-check"></i> Planeación de pagos, adeudos y obligaciones.</li>
-                        <li><i class="fas fa-check"></i> Indicadores financieros para dirección.</li>
-                        <li><i class="fas fa-check"></i> Modelos financieros editables en Excel.</li>
-                        <li><i class="fas fa-check"></i> Dashboards financieros para toma de decisiones.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 3. Auditoría y Riesgos -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/03A.png" alt="Auditoría y Riesgos">
-                </div>
-                <div class="service-body">
-                    <h3>Auditoría y Riesgos</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Detectamos riesgos antes de que se conviertan en contingencias financieras, fiscales o legales.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Auditoría financiera interna.</li>
-                        <li><i class="fas fa-check"></i> Revisión de control interno.</li>
-                        <li><i class="fas fa-check"></i> Evaluación de riesgos contables, fiscales y administrativos.</li>
-                        <li><i class="fas fa-check"></i> Revisión de cuentas relevantes: bancos, clientes, proveedores, inventarios y pasivos.</li>
-                        <li><i class="fas fa-check"></i> Pruebas selectivas de operaciones.</li>
-                        <li><i class="fas fa-check"></i> Análisis de documentación soporte.</li>
-                        <li><i class="fas fa-check"></i> Revisión de cumplimiento de políticas internas.</li>
-                        <li><i class="fas fa-check"></i> Matrices de riesgo.</li>
-                        <li><i class="fas fa-check"></i> Informes de hallazgos y recommendations.</li>
-                        <li><i class="fas fa-check"></i> Planes de corrección y seguimiento.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 4. Asesoría Corporativa -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/04A.png" alt="Asesoría Corporativa">
-                </div>
-                <div class="service-body">
-                    <h3>Asesoría Corporativa</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Fortalecemos la estructura legal y corporativa de la empresa para que sus decisiones tengan validez, orden y protección.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Revisión de actas constitutivas y estatutos sociales.</li>
-                        <li><i class="fas fa-check"></i> Elaboración de actas de asamblea.</li>
-                        <li><i class="fas fa-check"></i> Cesión de acciones o partes sociales.</li>
-                        <li><i class="fas fa-check"></i> Aumentos y reducciones de capital.</li>
-                        <li><i class="fas fa-check"></i> Cambios de socios, administradores, apoderados o comisarios.</li>
-                        <li><i class="fas fa-check"></i> Reestructura de capital social.</li>
-                        <li><i class="fas fa-check"></i> Protocolización de acuerdos corporativos.</li>
-                        <li><i class="fas fa-check"></i> Revisión de poderes.</li>
-                        <li><i class="fas fa-check"></i> Integración de libros corporativos.</li>
-                        <li><i class="fas fa-check"></i> Soporte corporativo para operaciones relevantes.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 5. Capacitación Profesional -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/05A.png" alt="Capacitación Profesional">
-                </div>
-                <div class="service-body">
-                    <h3>Capacitación Profesional</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Capacitamos con enfoque práctico, técnico y aplicable a la realidad de empresas, profesionistas y equipos de trabajo.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Cursos de contabilidad para empresarios.</li>
-                        <li><i class="fas fa-check"></i> Capacitación fiscal para áreas administrativas.</li>
-                        <li><i class="fas fa-check"></i> Talleres de cumplimiento tributario.</li>
-                        <li><i class="fas fa-check"></i> Capacitación en CFDI, declaraciones y obligaciones fiscales.</li>
-                        <li><i class="fas fa-check"></i> Cursos de auditoría y control interno.</li>
-                        <li><i class="fas fa-check"></i> Capacitación en prevención de lavado de dinero.</li>
-                        <li><i class="fas fa-check"></i> Talleres de finanzas para no financieros.</li>
-                        <li><i class="fas fa-check"></i> Capacitación en uso de Excel, dashboards e IA aplicada.</li>
-                        <li><i class="fas fa-check"></i> Programas para despachos contables.</li>
-                        <li><i class="fas fa-check"></i> Conferencias empresariales y académicas.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 6. Eficiencia Digital e IA -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/06A.png" alt="Eficiencia Digital e IA">
-                </div>
-                <div class="service-body">
-                    <h3>Eficiencia Digital e IA</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Usamos tecnología e inteligencia artificial para simplificar procesos, reducir errores y mejorar la toma de decisiones.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Diagnóstico de procesos administrativos y contables.</li>
-                        <li><i class="fas fa-check"></i> Automatización de reportes en Excel.</li>
-                        <li><i class="fas fa-check"></i> Diseño de dashboards financieros, fiscales y administrativos.</li>
-                        <li><i class="fas fa-check"></i> Implementación de controles digitales.</li>
-                        <li><i class="fas fa-check"></i> Modelos de seguimiento de ingresos, gastos, cartera y flujo.</li>
-                        <li><i class="fas fa-check"></i> Uso de IA para análisis documental y financiero.</li>
-                        <li><i class="fas fa-check"></i> Estandarización de bases de datos.</li>
-                        <li><i class="fas fa-check"></i> Plantillas inteligentes para papeles de trabajo.</li>
-                        <li><i class="fas fa-check"></i> Digitalización de procesos internos.</li>
-                        <li><i class="fas fa-check"></i> Capacitación en herramientas digitales e IA aplicada al negocio.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 7. Compliance y PLD -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/07A.png" alt="Compliance y PLD">
-                </div>
-                <div class="service-body">
-                    <h3>Compliance y PLD</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Ayudamos a las empresas a cumplir, documentar y prevenir riesgos relacionados con operaciones vulnerables, controles internos y obligaciones normativas.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Diagnóstico de cumplimiento normativo.</li>
-                        <li><i class="fas fa-check"></i> Identificación de operaciones vulnerables.</li>
-                        <li><i class="fas fa-check"></i> Revisión de expedientes de clientes y proveedores.</li>
-                        <li><i class="fas fa-check"></i> Integración de políticas de identificación.</li>
-                        <li><i class="fas fa-check"></i> Manuales internos de cumplimiento.</li>
-                        <li><i class="fas fa-check"></i> Matrices de riesgo PLD.</li>
-                        <li><i class="fas fa-check"></i> Revisión de avisos y obligaciones aplicables.</li>
-                        <li><i class="fas fa-check"></i> Capacitación en prevención de lavado de dinero.</li>
-                        <li><i class="fas fa-check"></i> Soporte documental para operaciones relevantes.</li>
-                        <li><i class="fas fa-check"></i> Evaluación de riesgos por falta de trazabilidad.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 8. Fusiones y Adquisiciones -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/08A.png" alt="Fusiones y Adquisiciones">
-                </div>
-                <div class="service-body">
-                    <h3>Fusiones y Adquisiciones</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Acompañamos operaciones estratégicas con análisis financiero, fiscal, corporativo y documental para proteger el valor de la transacción.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Diagnóstico previo a la operación.</li>
-                        <li><i class="fas fa-check"></i> Due diligence financiero, fiscal y corporativo.</li>
-                        <li><i class="fas fa-check"></i> Análisis de riesgos en compraventa de empresas.</li>
-                        <li><i class="fas fa-check"></i> Revisión de estados financieros y contingencias.</li>
-                        <li><i class="fas fa-check"></i> Revisión de contratos, pasivos y obligaciones.</li>
-                        <li><i class="fas fa-check"></i> Valuación preliminar del negocio.</li>
-                        <li><i class="fas fa-check"></i> Estructuración fiscal de la operación.</li>
-                        <li><i class="fas fa-check"></i> Revisión de capital social y socios.</li>
-                        <li><i class="fas fa-check"></i> Integración de documentación corporativa.</li>
-                        <li><i class="fas fa-check"></i> Acompañamiento en cierre y transición.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 9. Cumplimiento Normativo -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/09A.png" alt="Cumplimiento Normativo">
-                </div>
-                <div class="service-body">
-                    <h3>Cumplimiento Normativo</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Ordenamos las obligaciones de la empresa para que opere con certeza, evidencia y control.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Diagnóstico de obligaciones fiscales, corporativas y administrativas.</li>
-                        <li><i class="fas fa-check"></i> Calendario de cumplimiento.</li>
-                        <li><i class="fas fa-check"></i> Revisión de obligaciones ante SAT, IMSS, INFONAVIT y autoridades locales.</li>
-                        <li><i class="fas fa-check"></i> Control de vencimientos y obligaciones periódicas.</li>
-                        <li><i class="fas fa-check"></i> Integración documental de expedientes.</li>
-                        <li><i class="fas fa-check"></i> Revisión de contratos, actas, poderes y registros.</li>
-                        <li><i class="fas fa-check"></i> Políticas internas de cumplimiento.</li>
-                        <li><i class="fas fa-check"></i> Control de obligaciones por área responsable.</li>
-                        <li><i class="fas fa-check"></i> Reportes ejecutivos de cumplimiento.</li>
-                        <li><i class="fas fa-check"></i> Planes de regularización.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 10. Defensa Fiscal -->
-            <div class="service-card">
-                <div class="service-img-container">
-                    <img src="./imagenes-servicios/10A.png" alt="Defensa Fiscal">
-                </div>
-                <div class="service-body">
-                    <h3>Defensa Fiscal</h3>
-                    <p class="service-enfoque"><strong>Enfoque:</strong> Defendemos al contribuyente con estrategia, documentación y argumentos técnicos frente a actos de autoridad.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Atención a cartas invitación.</li>
-                        <li><i class="fas fa-check"></i> Revisión de requerimientos fiscales.</li>
-                        <li><i class="fas fa-check"></i> Análisis de diferencias detectadas por la autoridad.</li>
-                        <li><i class="fas fa-check"></i> Integración de soporte documental.</li>
-                        <li><i class="fas fa-check"></i> Contestación de requerimientos.</li>
-                        <li><i class="fas fa-check"></i> Aclaraciones ante autoridad fiscal.</li>
-                        <li><i class="fas fa-check"></i> Revisión de créditos fiscales.</li>
-                        <li><i class="fas fa-check"></i> Estrategias de regularización.</li>
-                        <li><i class="fas fa-check"></i> Acompañamiento en revisiones fiscales.</li>
-                        <li><i class="fas fa-check"></i> Soporte técnico-contable para defensa fiscal.</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
 
-        <a href="index.html" class="btn-back">← Volver al Inicio</a>
-    </div>
+        <!-- SERVICIO 2 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/02B.png" alt="Servicio 02B">
+            <div class="servicio-info">
+                <h3>Servicio 2</h3>
+                <p>Tu sinopsis real del servicio 2 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 3 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/03C.png" alt="Servicio 03C">
+            <div class="servicio-info">
+                <h3>Servicio 3</h3>
+                <p>Tu sinopsis real del servicio 3 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 4 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/04D.png" alt="Servicio 04D">
+            <div class="servicio-info">
+                <h3>Servicio 4</h3>
+                <p>Tu sinopsis real del servicio 4 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 5 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/05E.png" alt="Servicio 05E">
+            <div class="servicio-info">
+                <h3>Servicio 5</h3>
+                <p>Tu sinopsis real del servicio 5 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 6 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/06F.png" alt="Servicio 06F">
+            <div class="servicio-info">
+                <h3>Servicio 6</h3>
+                <p>Tu sinopsis real del servicio 6 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 7 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/07G.png" alt="Servicio 07G">
+            <div class="servicio-info">
+                <h3>Servicio 7</h3>
+                <p>Tu sinopsis real del servicio 7 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 8 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/08H.png" alt="Servicio 08H">
+            <div class="servicio-info">
+                <h3>Servicio 8</h3>
+                <p>Tu sinopsis real del servicio 8 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 9 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/09I.png" alt="Servicio 09I">
+            <div class="servicio-info">
+                <h3>Servicio 9</h3>
+                <p>Tu sinopsis real del servicio 9 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 10 -->
+        <div class="servicio-card">
+            <img src="imagenes-servicios/10J.png" alt="Servicio 10J">
+            <div class="servicio-info">
+                <h3>Servicio 10</h3>
+                <p>Tu sinopsis real del servicio 10 va aquí de manera breve.</p>
+                <a href="contacto.html" class="boton-ver-mas">Saber más</a>
+            </div>
+        </div>
+
+    </main>
 
 </body>
 </html>
