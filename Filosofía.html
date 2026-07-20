@@ -3,28 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filosofía</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Nuestra Filosofía - Consultoría Integral Empresarial</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #3d2314;
+            background-image: linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px), linear-gradient(90deg, #4a2c1b, #351e11);
+            background-size: 4px 100%, 100% 20px, 100% 100%;
+            margin: 0;
+            padding: 0;
+            color: #2d3748;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fcfaf2;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        }
+        .header-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        .nav-links a {
+            color: #002b49;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: system-ui, -apple-system, sans-serif;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #c5a059; }
+        
+        h2 { 
+            color: #002b49; 
+            font-size: 26px; 
+            margin-top: 30px; 
+            border-bottom: 1px solid #e2e8f0; 
+            padding-bottom: 10px; 
+        }
+        p { 
+            font-size: 17px; 
+            color: #4a5568; 
+            line-height: 1.8; 
+            text-align: justify; 
+        }
+        .btn-regresar {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 24px;
+            background-color: #002b49;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, sans-serif;
+            transition: background 0.3s ease;
+        }
+        .btn-regresar:hover { background-color: #001a2c; }
+    </style>
 </head>
 <body>
-
     <div class="container">
-        <!-- Navegación -->
-        <nav class="main-nav">
-            <a href="index.html" class="nav-btn">Inicio</a>
-            <a href="mision-vision.html" class="nav-btn">Misión y Visión</a>
-            <a href="quienes-somos.html" class="nav-btn">Quiénes Somos</a>
-            <a href="filosofia.html" class="nav-btn active">Filosofía</a>
-        </nav>
+        <!-- Encabezado Interno -->
+        <div class="header-navigation">
+            <h1 style="color: #002b49; margin: 0; font-size: 26px;">Filosofía Institucional</h1>
+            <nav class="nav-links">
+                <a href="index.html">← Volver al Inicio</a>
+            </nav>
+        </div>
 
-        <!-- Contenido principal -->
-        <main class="content-box">
-            <h1>Filosofía</h1>
-            <p>
-                Más que atender números, acompañamos proyectos de vida y negocios con la responsabilidad, cercanía y profesionalismo que cada cliente merece. Creemos que detrás de cada empresa hay esfuerzo, sueños y personas que merecen un acompañamiento profesional, cercano y comprometido. Por eso trabajamos con ética, innovación y capacitación constante, ofreciendo soluciones que impulsan el presente y fortalecen el futuro.
-            </p>
-        </main>
+        <!-- Contenido Institucional -->
+        <h2>Nuestra Filosofía</h2>
+        <p>Nuestra filosofía cultural
+
+Creemos que cada cliente representa mucho más que una operación, una empresa o una obligación por cumplir. Detrás de cada proyecto existen personas, familias, esfuerzos, decisiones y sueños que merecen ser acompañados con responsabilidad, cercanía y visión.
+
+Nuestra cultura se construye sobre la confianza, la ética y el compromiso. Escuchamos antes de proponer, comprendemos antes de actuar y trabajamos para generar soluciones que aporten orden, seguridad y crecimiento sostenible. No buscamos ser únicamente prestadores de servicios, sino aliados estratégicos capaces de acompañar a nuestros clientes en cada etapa de su desarrollo.
+
+Transmitimos una forma de trabajo basada en la excelencia, la innovación y la mejora continua. Entendemos que el verdadero valor profesional no consiste solamente en resolver los problemas presentes, sino en anticipar riesgos, identificar oportunidades y ayudar a tomar mejores decisiones.
+
+Cada relación que construimos está guiada por el respeto, la transparencia y la responsabilidad. Nos interesa que nuestros clientes se sientan escuchados, respaldados y seguros de que sus proyectos están siendo atendidos con profesionalismo, experiencia y sentido humano.
+
+Nuestra filosofía es sencilla: crecer junto a nuestros clientes, proteger lo que han construido y transformar cada desafío en una oportunidad para avanzar con mayor certeza, confianza y visión de futuro.
+
+        <!-- Botón de retorno rápido -->
+        <a href="index.html" class="btn-regresar">Volver a la Página Principal</a>
     </div>
-
 </body>
 </html>
