@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Misión y Visión - Consultoría Integral Empresarial</title>
+    <title>Biblioteca - Consultoría Integral Empresarial</title>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -38,24 +38,49 @@
             font-family: system-ui, -apple-system, sans-serif;
             transition: color 0.3s;
         }
-        .nav-links a:hover { color: #c5a059; }
-        
-        h2 { 
-            color: #002b49; 
-            font-size: 26px; 
-            margin-top: 30px; 
-            border-bottom: 1px solid #e2e8f0; 
-            padding-bottom: 10px; 
+        .nav-links a:hover {
+            color: #c5a059;
         }
-        p { 
-            font-size: 17px; 
-            color: #4a5568; 
-            line-height: 1.8; 
-            text-align: justify; 
+        h2 {
+            color: #002b49;
+            font-size: 26px;
+            margin-top: 30px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        p {
+            font-size: 17px;
+            color: #4a5568;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        /* Estilos para los nuevos botones de la biblioteca */
+        .biblioteca-botones {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 35px 0;
+        }
+        .btn-biblioteca {
+            display: inline-block;
+            padding: 14px 24px;
+            background-color: #c5a059;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, sans-serif;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-biblioteca:hover {
+            background-color: #002b49;
+            transform: translateY(-2px);
         }
         .btn-regresar {
             display: inline-block;
-            margin-top: 40px;
+            margin-top: 20px;
             padding: 12px 24px;
             background-color: #002b49;
             color: white;
@@ -65,28 +90,35 @@
             font-family: system-ui, -apple-system, sans-serif;
             transition: background 0.3s ease;
         }
-        .btn-regresar:hover { background-color: #001a2c; }
+        .btn-regresar:hover {
+            background-color: #001a2c;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Encabezado Interno -->
         <div class="header-navigation">
-            <h1 style="color: #002b49; margin: 0; font-size: 26px;">Filosofía Institucional</h1>
+            <h1 style="color: #002b49; margin: 0; font-size: 26px;">Biblioteca</h1>
             <nav class="nav-links">
                 <a href="index.html">← Volver al Inicio</a>
             </nav>
         </div>
 
-        <!-- Contenido Institucional -->
-        <h2>Nuestra Misión</h2>
-        <p>Proveer certidumbre financiera, legal y fiscal a través de un acompañamiento cercano y experto, permitiendo a los líderes enfocar sus energías en expandir el valor de sus empresas de manera responsable.</p>
+        <!-- Contenido -->
+        <h2>Recursos y Contenido Exclusivo</h2>
+        <p>Explora nuestra sección de aprendizaje continuo. Selecciona una categoría para ver los materiales disponibles:</p>
 
-        <h2>Nuestra Visión</h2>
-        <p>Posicionarnos como el aliado estratégico multidisciplinario de referencia, reconocido por nuestra innovación, ética inquebrantable y capacidad para transformar desafíos regulatorios en ventajas competitivas.</p>
+        <!-- SECCIÓN DE BOTONES: CURSOS / VIDEOS Y ARTÍCULOS -->
+        <div class="biblioteca-botones">
+            <a href="cursos.html" class="btn-biblioteca">🎥 Cursos y Capacitaciones</a>
+            <a href="articulos.html" class="btn-biblioteca">📄 Artículos</a>
+        </div>
 
         <!-- Botón de retorno rápido -->
-        <a href="index.html" class="btn-regresar">Volver a la Página Principal</a>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn-regresar">Volver a la Página Principal</a>
+        </div>
     </div>
 </body>
 </html>
