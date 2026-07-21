@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos - Consultoría Integral Empresarial</title>
+    <title>Quiénes Somos y Nuestra Visión - Consultoría Integral Empresarial</title>
     <style>
         body {
             font-family: 'Georgia', serif;
             background-color: #3d2314;
-            background-image: 
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px),
-                linear-gradient(90deg, #4a2c1b, #351e11);
+            background-image: linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px), linear-gradient(90deg, #4a2c1b, #351e11);
             background-size: 4px 100%, 100% 20px, 100% 100%;
             margin: 0;
             padding: 0;
             color: #2d3748;
         }
-
         .container {
             max-width: 800px;
             margin: 50px auto;
@@ -26,16 +22,14 @@
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
         }
-
         .header-navigation {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
-
         .nav-links a {
             color: #002b49;
             text-decoration: none;
@@ -44,31 +38,37 @@
             font-family: system-ui, -apple-system, sans-serif;
             transition: color 0.3s;
         }
-
         .nav-links a:hover {
             color: #c5a059;
         }
-
         h2 {
             color: #002b49;
             font-size: 24px;
-            margin-top: 30px;
+            margin-top: 35px;
+            margin-bottom: 15px;
             border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
-
         p {
-            font-size: 17px;
+            font-size: 16px;
             color: #4a5568;
             line-height: 1.8;
             text-align: justify;
         }
-
+        .box-destacada {
+            background: #ffffff;
+            border-left: 4px solid #c5a059;
+            padding: 20px 25px;
+            margin-top: 25px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            line-height: 1.8;
+        }
         .btn-regresar {
             display: inline-block;
             margin-top: 40px;
             padding: 12px 24px;
-            background-color: #002b49;
+            background-color: #7b4322;
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -76,14 +76,12 @@
             font-family: system-ui, -apple-system, sans-serif;
             transition: background 0.3s ease;
         }
-
         .btn-regresar:hover {
             background-color: #001a2c;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         <!-- Encabezado Interno -->
         <div class="header-navigation">
@@ -93,13 +91,23 @@
             </nav>
         </div>
 
-        <!-- Contenido -->
-        <p>
-            Somos una firma de consultoría integral que combina experiencia contable, fiscal, financiera, jurídica y empresarial para acompañar a nuestros clientes con una visión estratégica y cercana. Nos distinguimos por comprender cada proyecto de manera integral, anticipar riesgos, identificar oportunidades y transformar la información en decisiones más seguras, siempre con ética, profesionalismo, innovación y un firme compromiso con el crecimiento de quienes confían en nosotros.        </p>
+        <!-- Quiénes Somos -->
+        <p>Somos un equipo de profesionales especializados en consultoría fiscal, contable y administrativa. Nos apasiona conectar las áreas clave de los negocios para ofrecer soluciones reales, seguras y adaptadas a las exigencias del entorno actual.</p>
 
-        <!-- Botón de retorno rápido -->
+        <!-- Misión -->
+        <h2>Nuestra Misión</h2>
+        <div class="box-destacada">
+            Brindar certeza jurídica, orden financiero y estrategia fiscal a cada empresario, transformando los retos administrativos en ventajas competitivas mediante un servicio cercano y altamente calificado.
+        </div>
+
+        <!-- Visión -->
+        <h2>Nuestra Visión</h2>
+        <div class="box-destacada" style="border-left-color: #002b49;">
+            Consolidarnos como la firma líder en consultoría integral empresarial, reconocidos por nuestra integridad, innovación en procesos y por ser el pilar fundamental en el éxito a largo plazo de nuestros clientes.
+        </div>
+
+        <!-- Botón de retorno -->
         <a href="index.html" class="btn-regresar">Volver a la Página Principal</a>
     </div>
-
 </body>
 </html>
