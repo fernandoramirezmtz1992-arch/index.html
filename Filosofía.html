@@ -28,7 +28,7 @@
             align-items: center;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         .nav-links a {
             color: #002b49;
@@ -38,20 +38,42 @@
             font-family: system-ui, -apple-system, sans-serif;
             transition: color 0.3s;
         }
-        .nav-links a:hover { color: #c5a059; }
-        
-        h2 { 
-            color: #002b49; 
-            font-size: 26px; 
-            margin-top: 30px; 
-            border-bottom: 1px solid #e2e8f0; 
-            padding-bottom: 10px; 
+        .nav-links a:hover {
+            color: #c5a059;
         }
-        p { 
-            font-size: 17px; 
-            color: #4a5568; 
-            line-height: 1.8; 
-            text-align: justify; 
+        h2 {
+            color: #002b49;
+            font-size: 24px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        p {
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        ul {
+            padding-left: 20px;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+        li {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .manifiesto-box {
+            background: #ffffff;
+            border-left: 4px solid #c5a059;
+            padding: 20px 25px;
+            margin-top: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            font-style: italic;
+            color: #2d3748;
+            line-height: 1.8;
         }
         .btn-regresar {
             display: inline-block;
@@ -65,7 +87,9 @@
             font-family: system-ui, -apple-system, sans-serif;
             transition: background 0.3s ease;
         }
-        .btn-regresar:hover { background-color: #001a2c; }
+        .btn-regresar:hover {
+            background-color: #001a2c;
+        }
     </style>
 </head>
 <body>
@@ -78,25 +102,27 @@
             </nav>
         </div>
 
-        <!-- Contenido Cultural -->
-        <p>
-Filosofía Empresarial
-Nuestros Principios
-Visión Estratégica: No solo resolvemos lo inmediato, anticipamos escenarios para proteger y potenciar tu patrimonio a largo plazo.
+        <!-- Contenido Cultural Organizado -->
+        <p>En nuestra consultoría, regimos cada paso bajo una clara visión de compromiso, orden y estrategia para impulsar el éxito de nuestros clientes.</p>
 
-Cercanía y Transparencia: Traducimos los temas complejos, legales y fiscales en un lenguaje claro para que siempre tomes decisiones informadas con total seguridad.
+        <h2>Nuestros Principios</h2>
+        <ul>
+            <li><strong>Visión Estratégica:</strong> No solo resolvemos lo inmediato, anticipamos escenarios para proteger y potenciar tu patrimonio a largo plazo.</li>
+            <li><strong>Cercanía y Transparencia:</strong> Traducimos los temas complejos, legales y fiscales en un lenguaje claro para que siempre tomes decisiones informadas con total seguridad.</li>
+            <li><strong>Enfoque Integral:</strong> Entendemos que cada negocio es único; por ello, conectamos el área contable, fiscal y administrativa en una sola estrategia coordinada.</li>
+        </ul>
 
-Enfoque Integral: Entendemos que cada negocio es único; por ello, conectamos el área contable, fiscal y administrativa en una sola estrategia coordinada.
+        <h2>Nuestros Valores</h2>
+        <ul>
+            <li><strong>Confianza:</strong> Es el cimiento de nuestra relación con cada cliente, protegiendo su información y sus intereses como propios.</li>
+            <li><strong>Compromiso:</strong> Asumimos cada proyecto con el más alto nivel de rigor profesional y entrega absoluta.</li>
+            <li><strong>Ética:</strong> Actuamos siempre bajo el marco normativo y con absoluta integridad en cada proceso.</li>
+        </ul>
 
-Nuestros Valores
-Confianza: Es el cimiento de nuestra relación con cada cliente, protegiendo su información y sus intereses como propios.
-
-Compromiso: Asumimos cada proyecto con el más alto nivel de rigor profesional y entrega absoluta.
-
-Ética: Actuamos siempre bajo el marco normativo y con absoluta integridad en cada proceso.
-
-Nuestro Manifiesto
-"Creemos firmemente que los números no son solo obligaciones que cumplir, sino la brújula que guía el éxito de un negocio. Nuestro propósito es liberar a los empresarios de la incertidumbre fiscal y administrativa, permitiéndoles enfocar su energía en lo que mejor saben hacer: hacer crecer su empresa y construir su legado."
+        <h2>Nuestro Manifiesto</h2>
+        <div class="manifiesto-box">
+            "Creemos firmemente que los números no son solo obligaciones que cumplir, sino la brújula que guía el éxito de un negocio. Nuestro propósito es liberar a los empresarios de la incertidumbre fiscal y administrativa, permitiéndoles enfocar su energía en lo que mejor saben hacer: hacer crecer su empresa y construir su legado."
+        </div>
 
         <!-- Botón de retorno rápido -->
         <a href="index.html" class="btn-regresar">Volver a la Página Principal</a>
