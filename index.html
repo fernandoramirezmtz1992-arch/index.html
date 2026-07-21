@@ -302,18 +302,43 @@
 
     <div class="container">
         
-   <div class="header-section" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px;">
-    <div style="display: flex; flex-direction: column; align-items: center;">
-        <video src="Imagenes/41ded87cbc874a828bf0316f2ac70413.mp4" autoplay muted loop class="logo escudo-buho"></video>
-        <h1>Consultoría Integral Empresarial</h1>
-        <div class="subtitle">Construimos la estrategia que impulsa tu crecimiento.</div>
-    </div>
-    <nav class="main-nav" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-        <a href="mision-vision.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 16px; border: 1px solid #c5a059; padding: 8px 16px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#c5a059'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#002b49'">Misión y Visión</a>
-        <a href="Quiénes-somos.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 16px; border: 1px solid #c5a059; padding: 8px 16px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#c5a059'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#002b49'">Quiénes Somos</a>
-        <a href="Filosofía.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 16px; border: 1px solid #c5a059; padding: 8px 16px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#c5a059'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#002b49'">Filosofía</a>
-    </nav>
-</div>    
+<div class="header-section" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; text-align: left;">
+        
+        <!-- LOGO Y TÍTULO A LA IZQUIERDA -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <video src="Imagenes/41ded87cbc874a828bf0316f2ac70413.mp4" autoplay muted loop class="logo escudo-buho" style="max-width: 90px; margin: 0;"></video>
+          <div>
+            <h1 style="font-size: 26px;">Consultoría Integral Empresarial</h1>
+            <div class="subtitle" style="font-size: 15px;">Construimos la estrategia que impulsa tu crecimiento.</div>
+          </div>
+        </div>
+
+        <!-- MENÚ A LA DERECHA -->
+        <nav class="main-nav" style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+          <a href="mision-vision.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 15px; border: 1px solid transparent; padding: 8px 12px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.border='1px solid #c5a059'; this.style.backgroundColor='#fdf8ef'" onmouseout="this.style.border='1px solid transparent'; this.style.backgroundColor='transparent'">Misión y Visión</a>
+          
+          <a href="Quiénes-somos.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 15px; border: 1px solid transparent; padding: 8px 12px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.border='1px solid #c5a059'; this.style.backgroundColor='#fdf8ef'" onmouseout="this.style.border='1px solid transparent'; this.style.backgroundColor='transparent'">Quiénes Somos</a>
+          
+          <a href="Filosofía.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 15px; border: 1px solid transparent; padding: 8px 12px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.border='1px solid #c5a059'; this.style.backgroundColor='#fdf8ef'" onmouseout="this.style.border='1px solid transparent'; this.style.backgroundColor='transparent'">Filosofía</a>
+          
+          <a href="#como-trabajamos" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 15px; border: 1px solid transparent; padding: 8px 12px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.border='1px solid #c5a059'; this.style.backgroundColor='#fdf8ef'" onmouseout="this.style.border='1px solid transparent'; this.style.backgroundColor='transparent'">Cómo Trabajamos</a>
+
+          <!-- BOTÓN DESPLEGABLE: NUESTROS SERVICIOS -->
+          <div class="dropdown">
+            <a href="servicios.html" style="background-color: #c5a059; color: white; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 15px; border: 1px solid #c5a059; padding: 8px 18px; border-radius: 6px; display: inline-block; transition: all 0.3s;">Servicios ▼</a>
+            
+            <!-- LO QUE SE DESPLIEGA AL PASAR EL MOUSE -->
+            <div class="dropdown-content">
+              <a href="servicios.html#construccion">Construcción y Servicios</a>
+              <a href="servicios.html#agricola">Sector Agrícola</a>
+              <a href="servicios.html#transporte">Transporte y Logística</a>
+              <a href="servicios.html#plataformas">Plataformas y Hospedaje</a>
+              <a href="servicios.html#salud">Profesionales de la Salud</a>
+              <a href="servicios.html#ecommerce">Ventas Digitales</a>
+            </div>
+          </div>
+        </nav>
+      </div>   
         <p class="welcome-text">
             Somos el aliado estratégico de empresarios, emprendedores y personas que buscan crecer con seguridad y tomar mejores decisiones para su patrimonio y su negocio. 
             <br><br>
