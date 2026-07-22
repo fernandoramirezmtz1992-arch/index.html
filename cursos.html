@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Cursos y Talleres</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .seccion-cabecera {
+            position: relative;
+            height: 70vh;
+            background-image: url('Imagenes/fondo-aprendizaje-cursos.jpg'); /* Puedes cambiar o ajustar el nombre de tu imagen */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .contenido-cabecera {
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .logo-cabecera {
+            max-height: 80px;
+            margin-bottom: 20px;
+        }
+        .contenido-cabecera h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .contenido-cabecera p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #ddd;
+        }
+        .btn-explorar {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #1a365d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-explorar:hover {
+            background-color: #2b4c7e;
+        }
+        .seccion-contenido {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .seccion-contenido h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #1a365d;
+        }
+        .seccion-contenido p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
 
+    <header class="seccion-cabecera">
+        <div class="overlay"></div>
+        <div class="contenido-cabecera">
+            <img src="Logo 1.png" alt="Logo" class="logo-cabecera">
+            <h1>CURSOS Y CAPACITACIONES</h1>
+            <p>Potencia tus habilidades con nuestros programas de formación especializados.</p>
+            <a href="#contenido" class="btn-explorar">Ver Cursos</a>
+        </div>
+    </header>
+
+    <main id="contenido" class="seccion-contenido">
+        <h2>Próximamente</h2>
+        <p>Estamos diseñando experiencias de aprendizaje interactivas y prácticas. Muy pronto encontrarás toda la oferta académica disponible.</p>
+    </main>
+
+</body>
+</html>
