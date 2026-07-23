@@ -1,23 +1,67 @@
-<details class="btn-cta-details" style="display: inline-block; position: relative;">
-    <summary class="btn-cta btn-secondary" style="list-style: none; cursor: pointer; padding: 12px 30px; background-color: #2b4c7e; color: white; border-radius: 5px; font-weight: bold; text-align: center; user-select: none;">
-        📍 Visítanos ▾
-    </summary>
-    <div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; background: white; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; width: 220px; z-index: 9999; overflow: hidden; text-align: left;">
-        
-        <!-- Enlace a Google Maps -->
-        <a href="https://maps.app.goo.gl/kNLUFbkkSp75gh7X8" target="_blank" style="padding: 12px 15px; color: #1a365d; text-decoration: none; font-weight: bold; border-bottom: 1px solid #f0f0f0; display: block;">
-            📍 Google Maps
-        </a>
-        
-        <!-- Enlace a Facebook -->
-        <a href="https://www.facebook.com/profile.php?id=61591007356773" target="_blank" style="padding: 12px 15px; color: #1a365d; text-decoration: none; font-weight: bold; border-bottom: 1px solid #f0f0f0; display: block;">
-            📘 Facebook
-        </a>
-        
-        <!-- Enlace a Instagram -->
-        <a href="https://www.instagram.com/tu_usuario" target="_blank" style="padding: 12px 15px; color: #1a365d; text-decoration: none; font-weight: bold; display: block;">
-            📸 Instagram
-        </a>
-        
-    </div>
-</details>
+<!-- Contenedor principal para la botonera -->
+<div style="text-align: center; margin: 60px 0 40px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+    <!-- Botón de Google Maps (Grande y con color rojo) -->
+    <a href="https://maps.app.goo.gl/kNLUFbkkSp75gh7X8" target="_blank" style="
+        display: flex; 
+        align-items: center; 
+        gap: 10px; 
+        padding: 18px 35px; 
+        background-color: #dc4c3f; /* Rojo de Google Maps */
+        color: white; 
+        border-radius: 50px; /* Botón totalmente redondeado */
+        font-weight: bold; 
+        font-size: 18px; 
+        text-decoration: none; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-transform: uppercase;
+    " onmouseover="this.style.transform='translateY(-3px)'; this.style.box_shadow='0 6px 12px rgba(0,0,0,0.3)';" 
+       onmouseout="this.style.transform='translateY(0)'; this.style.box_shadow='0 4px 8px rgba(0,0,0,0.2)';">
+        <img src="https://upload.wikimedia.org/svg/2020/Google_Maps_icon_(2020).svg" alt="Maps" style="width: 25px; height: 25px;">
+        Ubicación
+    </a>
+
+    <!-- Botón de Facebook (Grande y con color azul) -->
+    <a href="https://www.facebook.com/profile.php?id=61591007356773" target="_blank" style="
+        display: flex; 
+        align-items: center; 
+        gap: 10px; 
+        padding: 18px 35px; 
+        background-color: #1877F2; /* Azul de Facebook */
+        color: white; 
+        border-radius: 50px; 
+        font-weight: bold; 
+        font-size: 18px; 
+        text-decoration: none; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-transform: uppercase;
+    " onmouseover="this.style.transform='translateY(-3px)'; this.style.box_shadow='0 6px 12px rgba(0,0,0,0.3)';" 
+       onmouseout="this.style.transform='translateY(0)'; this.style.box_shadow='0 4px 8px rgba(0,0,0,0.2)';">
+        <img src="https://upload.wikimedia.org/svg/2021/Facebook_f_logo_(2021).svg" alt="Facebook" style="width: 25px; height: 25px; filter: brightness(0) invert(1);">
+        Síguenos
+    </a>
+
+    <!-- Botón de Instagram (Grande y con degradado) -->
+    <a href="https://www.instagram.com/tu_usuario" target="_blank" style="
+        display: flex; 
+        align-items: center; 
+        gap: 10px; 
+        padding: 18px 35px; 
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Degradado de Instagram */
+        color: white; 
+        border-radius: 50px; 
+        font-weight: bold; 
+        font-size: 18px; 
+        text-decoration: none; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-transform: uppercase;
+    " onmouseover="this.style.transform='translateY(-3px)'; this.style.box_shadow='0 6px 12px rgba(0,0,0,0.3)';" 
+       onmouseout="this.style.transform='translateY(0)'; this.style.box_shadow='0 4px 8px rgba(0,0,0,0.2)';">
+        <img src="https://upload.wikimedia.org/svg/2016/Instagram_logo_2016.svg" alt="Instagram" style="width: 25px; height: 25px; filter: brightness(0) invert(1);">
+        Galería
+    </a>
+
+</div>
