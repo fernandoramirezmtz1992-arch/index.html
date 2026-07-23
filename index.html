@@ -3,97 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Cursos y Talleres</title>
+    <title>Consultoría Integral Empresarial</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: #3d2314; 
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px),
+                linear-gradient(90deg, #4a2c1b, #351e11);
+            background-size: 4px 100%, 100% 20px, 100% 100%;
+            margin: 0; 
+            padding: 0; 
+            color: #2d3748; 
         }
-        .seccion-cabecera {
-            position: relative;
-            height: 70vh;
-            background-image: url('Imagenes/fondo-aprendizaje-cursos.jpg'); /* Puedes cambiar o ajustar el nombre de tu imagen */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        .container {
+            max-width: 800px; 
+            margin: 50px auto; 
+            padding: 40px; 
+            background-color: #fcfaf2; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
         }
-        .overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1;
+        
+        .header-section {
+            text-align: left; 
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
         }
-        .contenido-cabecera {
-            z-index: 2;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-        .logo-cabecera {
-            max-height: 80px;
-            margin-bottom: 20px;
-        }
-        .contenido-cabecera h1 {
-            font-size: 2.5rem;
+        .logo {
+            max-width: 180px; 
+            height: auto; 
             margin-bottom: 15px;
+            display: block;
         }
-        .contenido-cabecera p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            color: #ddd;
+        h1 { 
+            color: #002b49; 
+            font-size: 32px;
+            margin: 0 0 5px 0;
+            letter-spacing: 0.5px;
         }
-        .btn-explorar {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #1a365d;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        .subtitle {
+            color: #c5a059; 
+            font-size: 18px;
             font-weight: bold;
-            transition: background 0.3s;
+            margin: 0;
         }
-        .btn-explorar:hover {
-            background-color: #2b4c7e;
+
+        .welcome-text { 
+            font-size: 18px; 
+            color: #4a5568; 
+            line-height: 1.8; 
+            text-align: justify; 
+            margin-bottom: 40px;
         }
-        .seccion-contenido {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-        .seccion-contenido h2 {
-            font-size: 2rem;
+        
+        details {
+            background-color: #ffffff; 
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
             margin-bottom: 15px;
-            color: #1a365d;
+            padding: 18px;
+            text-align: left;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
-        .seccion-contenido p {
-            font-size: 1.1rem;
+        details:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+      details[open] {
+    border-color: #c5a059;
+    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.12);
+    transform: translateY(0);
+    /* Logo del búho de fondo cuando se abre */
+    background-image: url('Logo 1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: rgba(252, 250, 242, 0.94); 
+    background-blend-mode: overlay;
+}
+            transform: translateY(0);
+        }
+        summary {
+            font-size: 19px;
+            font-weight: bold;
+            color: #002b49; 
+            cursor: pointer;
+            outline: none;
+            list-style: none; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: "➕";
+            font-size: 13px;
+            color: #c5a059;
+            transition: transform 0.4s ease;
+        }
+        details[open] summary::after {
+            transform: rotate(180deg);
+            content: "➖";
+        }
+
+        .content {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.8;
+            text-align: justify;
+            animation: fadelnSuave 0.5s ease-out forwards;
+        }
+        @keyframes fadelnSuave {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content h3 {
+            color: #002b49;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .manifiesto-box {
+            font-style: italic;
+            border-left: 3px solid #c5a059;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #3182ce;
+        }
+
+        .profile-title {
+            color: #002b49;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .profile-subtitle {
+            color: #c5a059;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            color: #002b49;
+            font-size: 24px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        .testimonial-card {
+            background-color: #ffffff;
+            border-left: 4px solid #c5a059;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.01) translateX(3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        .stars {
+            color: #c5a059;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: #4a5568;
+            font-size: 15px;
             line-height: 1.6;
-            color: #555;
+            margin-bottom: 10px;
         }
-    </style>
+        .testimonial-author {
+            font-weight: bold;
+            color: #002b49;
+            font-size: 14px;
+        }
+
+        .review-form {
+            background-color: transparent; 
+            border: none; 
+            padding: 10px 0;
+            text-align: left;
+            margin-top: 40px;
+        }
+        .review-form h4 {
+            color: #002b49;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            background-color: #ffffff; 
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #c5a059;
+        }
+        .btn-review {
+            background-color: #002b49;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-review:hover {
+            background-color: #001a2c;
+            transform: translateY(-1px);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 45px; 
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap; 
+        }
+        .btn-cta {
+            display: inline-block; 
+            padding: 14px 28px; 
+            background-color: #c5a059; 
+            color: #ffffff; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            font-size: 16px; 
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.25);
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .btn-cta:hover {
+            background-color: #aa8643; 
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
+            transform: translateY(-3px);
+        }
+        .btn-secondary {
+            background-color: #002b49; 
+            box-shadow: 0 4px 10px rgba(0, 43, 73, 0.25);
+        }
+        .btn-secondary:hover {
+            background-color: #001a2c;
+            box-shadow: 0 8px 20px rgba(0, 43, 73, 0.4);
+        }
+   </style>
+
+<style>
+/* Estilo base para el escudo del búho */
+.escudo-buho {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.escudo-buho:hover {
+    transform: scale(1.1) translateY(-5px);
+    filter: drop-shadow(0px 10px 15px rgba(197, 160, 89, 0.4));
+}
+
+/* Efecto al hacer clic */
+.escudo-buho:active {
+    transform: scale(0.95);
+}
+</style> 
 </head>
 <body>
+    <div class="container">
+      <div class="header-section">
+        <video src="Imagenes/41ded87cbc874a828bf0316f2ac70413.mp4" autoplay muted loop class="logo escudo-buho"></video>
+        <h1>Consultoría Integral Empresarial</h1>
+        <div class="subtitle">Construimos la estrategia que impulsa tu crecimiento.</div>
+        
+        <div style="margin-top: 25px;"></div>
+        
+     <nav class="main-nav" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-start;">          
+          <a href="Quiénes-somos.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 16px; border: 1px solid #c5a059; padding: 8px 16px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#c5a059'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#002b49'">Quiénes Somos</a>
+          
+          <a href="Filosofía.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 16px; border: 1px solid #c5a059; padding: 8px 16px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#c5a059'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#002b49'">Filosofía</a>
+          
+          <a href="servicios.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 16px; border: 1px solid #c5a059; padding: 8px 16px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#c5a059'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#002b49'">Servicios</a>
+          
+          <a href="Como-trabajamos.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 16px; border: 1px solid #c5a059; padding: 8px 16px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#c5a059'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#002b49'">Cómo Trabajamos</a>
 
-    <header class="seccion-cabecera">
-        <div class="overlay"></div>
-        <div class="contenido-cabecera">
-            <img src="Logo 1.png" alt="Logo" class="logo-cabecera">
-            <h1>CURSOS Y CAPACITACIONES</h1>
-            <p>Potencia tus habilidades con nuestros programas de formación especializados.</p>
-            <a href="#contenido" class="btn-explorar">Ver Cursos</a>
+<a href="Biblioteca.html" style="color: #7b4322; text-decoration: none; font-weight: bold; font-family: inherit; font-size: 16px; border: 1px solid #c5a059; padding: 8px 16px; border-radius: 6px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#c5a059'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#002b49'">Biblioteca</a>
+         
+     </nav>
+      </div>
+
+      <p class="welcome-text">
+        Somos el aliado estratégico de empresarios, emprendedores y personas que buscan crecer con seguridad y tomar mejores decisiones para su patrimonio y su negocio.
+        <br><br>
+        Más que cumplir obligaciones contables y fiscales, nos enfocamos en comprender cada situación, anticipar riesgos y transformar la información en estrategias que generen valor, confianza y crecimiento.
+      </p>
+      </details>     
+        <!-- SECCIÓN 3: EXPERIENCIA -->
+        <details>
+            <summary>Experiencia que Inspira Confianza</summary>
+            <div class="content">
+                <h3>Ocho años construyendo resultados</h3>
+                <p>Creemos que la confianza no se promete, se construye con resultados. Durante más de 8 años de experiencia, hemos acompañado a emprendedores, profesionistas, empresas familiares y organizaciones de distintos sectores, entendiendo que cada cliente tiene necesidades, retos y objetivos únicos.</p>
+                <p>Nuestra experiencia nos enseña que los mejores negocios no se construyen solo con números, sino con confianza, compromiso y decisiones inteligentes. Esa es la diferencia que ofrecemos a cada cliente que deposita su confianza en nosotros.</p>
+            </div>
+        </details>
+<!-- SECTORES DE ESPECIALIZACIÓN -->
+<details>
+    <summary>Especialización por Sectores</summary>
+    <div class="content">
+        <h3>Experiencia enfocada en giros clave</h3>
+        <p>A lo largo de nuestra trayectoria hemos desarrollado una profunda especialización en sectores con regulaciones técnicas y fiscales de alta complejidad:</p>
+
+        <!-- Galería Grid (Collage) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin: 20px 0;">
+            
+            <!-- Tarjeta 1: Construcción -->
+            <div style="background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
+                <img src="Imagenes/construccion.jpg" alt="Construcción" style="width: 100%; height: 130px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h4 style="margin: 0 0 8px 0; color: #002b49; font-size: 16px;">Construcción y Servicios</h4>
+                    <p style="font-size: 13px; margin: 0; color: #4a5568; line-height: 1.5;">Blindaje e ingeniería fiscal para el sector inmobiliario y constructor.
+
+Optimizamos la carga tributaria de tus proyectos, garantizamos el cumplimiento normativo (SIROC, REPSE y SISUB) y maximizamos la rentabilidad de cada obra desde el primer plano hasta la entrega.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Agrícola -->
+            <div style="background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
+                <img src="Imagenes/agricola.jpg" alt="Sector Agrícola" style="width: 100%; height: 130px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h4 style="margin: 0 0 8px 0; color: #002b49; font-size: 16px;">Sector Agrícola</h4>
+                    <p style="font-size: 13px; margin: 0; color: #4a5568; line-height: 1.5;">Estrategias que hacen rendir el fruto de tu tierra.
+
+Consultoría especializada en citricultura, comercialización y exportación. Aprovechamos al máximo los beneficios y facilidades fiscales del sector primario para proteger tu liquidez y hacer crecer tu agronegocio..</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Transporte -->
+            <div style="background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
+                <img src="Imagenes/transporte.jpg" alt="Transporte y Logística" style="width: 100%; height: 130px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h4 style="margin: 0 0 8px 0; color: #002b49; font-size: 16px;">Transporte y Logística</h4>
+                    <p style="font-size: 13px; margin: 0; color: #4a5568; line-height: 1.5;">Convertimos la complejidad fiscal del autotransporte en tu mayor ventaja competitiva: control de costos, protección ante auditorías del SAT, cumplimiento de la carta porte y optimización de flujos de efectivo para flotas y servicios logísticos.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: Plataformas / Hospedaje -->
+            <div style="background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
+                <img src="Imagenes/airbnb.jpg" alt="Plataformas Tecnológicas" style="width: 100%; height: 130px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h4 style="margin: 0 0 8px 0; color: #002b49; font-size: 16px;">Plataformas & Hosting</h4>
+                    <p style="font-size: 13px; margin: 0; color: #4a5568; line-height: 1.5;">Optimiza tus ingresos en Airbnb y plataformas digitales.
+
+Gestión integral de retenciones, deducciones y regularización para anfitriones y propietarios. Convertimos la complejidad fiscal de las plataformas de alojamiento en una estrategia clara para proteger y maximizar tus rendimientos.</p>
+                </div>
+            </div>
+<!-- Tarjeta 5: Servicios Profesionales de la Salud -->
+          <div style="background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); transition: transform 0.3s ease;">
+            <img src="Imagenes/salud.jpg" alt="Servicios Profesionales de la Salud" style="width: 100%; height: 130px; object-fit: cover;">
+            <div style="padding: 15px;">
+              <h4 style="margin: 0 0 8px 0; color: #002b49; font-size: 16px;">Servicios Profesionales de la Salud</h4>
+              <p style="font-size: 13px; margin: 0; color: #4a5568; line-height: 1.5;">Enfócate en tus pacientes; nosotros cuidamos la salud de tus finanzas.
+
+Estrategias contables, fiscales y administrativas adaptadas a médicos, clínicas y consultorios. Ordenamos tus ingresos, deducciones especializadas y obligaciones legales para garantizar tu tranquilidad financiera.</p>
+            </div>
+          </div>
+
+          <!-- Tarjeta 6: Plataformas Digitales (Ventas y Servicios) -->
+          <div style="background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); transition: transform 0.3s ease;">
+            <img src="Imagenes/plataformas-digitales.jpg" alt="Plataformas Digitales" style="width: 100%; height: 130px; object-fit: cover;">
+            <div style="padding: 15px;">
+              <h4 style="margin: 0 0 8px 0; color: #002b49; font-size: 16px;">Plataformas Digitales (Ventas y Servicios)</h4>
+              <p style="font-size: 13px; margin: 0; color: #4a5568; line-height: 1.5;">E-commerce y negocios digitales listos para escalar sin riesgos.
+
+Cumplimiento fiscal y estructuración inteligente para tiendas en línea, productos digitales y creadores de contenido. Diseñamos esquemas eficientes que te permiten operar en reglas claras y crecer sin sorpresas fiscales.</p>
+            </div>
+          </div>
+
+        <div class="manifiesto-box" style="color: #4a5568; font-style: normal; margin-top: 15px;">
+            <strong>¿Tu negocio pertenece a otro giro?</strong> Nuestra visión multidisciplinaria nos permite adaptarnos y ordenar las operaciones de cualquier modelo empresarial.
         </div>
-    </header>
+    </div>
+</details>
+   <details>
+    <summary>Liderazgo y Conoce al Equipo</summary>
+    <div class="content" style="margin-top: 15px;">
+        <p style="margin-bottom: 25px; font-size: 14px; color: #4a5568;">
+            Experiencia directiva con visión estratégica y el talento especializado que respalda el crecimiento de tu empresa.
+        </p>
 
-    <main id="contenido" class="seccion-contenido">
-        <h2>Próximamente</h2>
-        <p>Estamos diseñando experiencias de aprendizaje interactivas y prácticas. Muy pronto encontrarás toda la oferta académica disponible.</p>
-    </main>
+        <!-- INTEGRANTE 1: CP FERNANDO -->
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 35px; border-bottom: 1px solid #e2e8f0; padding-bottom: 30px;">
+            <div style="flex: 1; min-width: 200px; text-align: center;">
+                <div style="width: 160px; height: 160px; margin: 0 auto; border-radius: 50%; background-color: #f0f4f8; border: 3px solid #002b49; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <img src="ruta-de-tu-foto.jpg" alt="Fernando" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h4 style="color: #002b49; margin: 12px 0 4px 0; font-size: 16px;">Fernando</h4>
+                <p style="color: #c5a059; font-size: 13px; margin: 0; font-weight: 500;">Director General y Fundador</p>
+            </div>
+            <div style="flex: 2; min-width: 280px; font-size: 14px; color: #4a5568; line-height: 1.6;">
+                <h3 style="color: #002b49; font-size: 17px; margin-top: 0; margin-bottom: 10px;">Dirección y Visión Estratégica</h3>
+                <p style="margin-top: 0; margin-bottom: 12px;">
+                    Nuestro liderazgo y direccion convierte números en estrategia y empresas en legado
+                </p>
+                <p style="margin-top: 0; margin-bottom: 15px;">
+                    Brindamos asesoría integral a empresas que exigen precisión, confianza y una visión superior en la conducción de sus negocios. Integramos experiencia contable, jurídica, fiscal y financiera con tecnología e inteligencia artificial, bajo una revisión profesional rigurosa, para proteger el patrimonio, fortalecer la estructura empresarial y respaldar decisiones que aseguren permanencia, crecimiento y trascendencia.                </p>
+                
+                <details style="margin-top: 10px;">
+                    <summary>Ver currículum sintetizado</summary>
+                    <div style="margin-top: 10px; font-size: 13px; color: #4a5568; line-height: 1.6;">
+                        • Contador, Abogado y Maestro en estudios tributarios.<br>
+                        • Docente nivel universitario y capacitador para empresarios y emprendedores.<br>
+                        • Especialista en planeación fiscal y estrategia financiera corporativa.<br>
+                        • Años de trayectoria consolidando estructuras contables seguras.<br>
+                        • Enfoque en optimización de procesos mediante tecnología e innovación.
+                    </div>
+                </details>
+            </div>
+        </div>
 
+        <!-- INTEGRANTE 2: ROCIO -->
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 35px; border-bottom: 1px solid #e2e8f0; padding-bottom: 30px;">
+            <div style="flex: 1; min-width: 200px; text-align: center;">
+                <div style="width: 160px; height: 160px; margin: 0 auto; border-radius: 50%; background-color: #f0f4f8; border: 3px solid #002b49; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <img src="ruta-foto-Chio.jpg" alt="Rocio" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h4 style="color: #002b49; margin: 12px 0 4px 0; font-size: 16px;">Rocio</h4>
+                <p style="color: #c5a059; font-size: 13px; margin: 0; font-weight: 500;">CoDirectora y Fundadora</p>
+            </div>
+            <div style="flex: 2; min-width: 280px; font-size: 14px; color: #4a5568; line-height: 1.6;">
+                <h3 style="color: #002b49; font-size: 17px; margin-top: 0; margin-bottom: 10px;">Dirección estratégica, solidez financiera y visión comercial para empresas que buscan trascender.</h3>
+                <p style="margin-top: 0; margin-bottom: 15px;">
+                    Integramos estrategia, finanzas y desarrollo comercial para fortalecer la estructura de cada empresa, optimizar sus recursos y convertir sus oportunidades en crecimiento sostenible. Acompañamos a la alta dirección con análisis, criterio profesional y soluciones orientadas a proteger el patrimonio, elevar la rentabilidad y consolidar negocios con visión de futuro.                </p>
+                
+                <details style="margin-top: 10px;">
+                    <summary>Ver currículum sintetizado</summary>
+                    <div style="margin-top: 10px; font-size: 13px; color: #4a5568; line-height: 1.6;">
+                        • Contadora, empresaria y creadora de oportunidades.<br>
+                        • Su liderazgo convierte ideas en proyectos viables y productos creativos en experiencias de valor.<br>
+                        • Se distingue por integrar el análisis contable con una visión creativa de los negocios.<br>
+                        • Su perfil combina disciplina financiera, sensibilidad estética y capacidad emprendedora para transformar ideas en proyectos rentables.
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- INTEGRANTE 3: ISABEL -->
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+            <div style="flex: 1; min-width: 200px; text-align: center;">
+                <div style="width: 160px; height: 160px; margin: 0 auto; border-radius: 50%; background-color: #f0f4f8; border: 3px solid #002b49; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <img src="ruta-foto-isabel.jpg" alt="Isabel" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h4 style="color: #002b49; margin: 12px 0 4px 0; font-size: 16px;">Isabel</h4>
+                <p style="color: #c5a059; font-size: 13px; margin: 0; font-weight: 500;">Directora de Operaciones y Control Administrativo</p>
+            </div>
+            <div style="flex: 2; min-width: 280px; font-size: 14px; color: #4a5568; line-height: 1.6;">
+                <h3 style="color: #002b49; font-size: 17px; margin-top: 0; margin-bottom: 10px;">Dirección Operativa</h3>
+                <p style="margin-top: 0; margin-bottom: 15px;">
+                    Desde la Dirección de Operaciones se coordinan y supervisan los procesos que sostienen el trabajo de la firma: organización documental, conciliaciones bancarias, registros contables, validación de movimientos y cierres mensuales. Cada etapa se ejecuta con precisión, seguimiento y control, asegurando que la información entregada a nuestros clientes sea clara, oportuna y confiable para la adecuada administración de sus empresas.                </p>
+                
+                <details style="margin-top: 10px;">
+                    <summary>Ver currículum sintetizado</summary>
+                    <div style="margin-top: 10px; font-size: 13px; color: #4a5568; line-height: 1.6;">
+                        • Administradora con Alma de Contadora.<br>
+                        • Su perfil combina una visión organizacional sólida con una marcada orientación financiera.<br>
+                        • Disciplinada, Responsable, Eficaz y Eficiente.<br>
+                        • Joven profesional en Administración con sólida experiencia adquirida a través de su participación en diversos proyectos empresariales, administrativos y contables.<br>
+                        • Pieza estratégica para la continuidad, eficiencia y calidad de los servicios que brinda la firma.
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </div>
+</details>
+        <div class="cta-container">
+            <a href="contacto.html" class="btn-cta">
+                Solicitar una Asesoría
+            </a>
+            </a>
+            <a href="Redes sociales y contacto.html" class="btn-cta btn-secondary">
+                Visitanos
+            </a>
+        </div>
+
+        <div class="section-title">La voz de quienes confían en nosotros</div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Excelente servicio. Gracias a su consultoría logramos estructurar nuestra estrategia fiscal de este año y la tranquilidad que te brindan no tiene precio. Totalmente profesionales."</p>
+            <div class="testimonial-author">— Director General, PyME del Sector Comercial</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Más que contadores, se convirtieron en aliados de mi negocio. Te explican todo con total claridad y cercanía."</p>
+            <div class="testimonial-author">— Emprendedora, Servicios Tecnológicos</div>
+        </div>
+
+        <div class="review-form">
+            <h4>Comparta su experiencia con nosotros</h4>
+            <form action="#" method="POST">
+                <input type="text" class="form-input" placeholder="Su Nombre o Empresa" required>
+                <select class="form-input" required>
+                    <option value="">Seleccione su calificación</option>
+                    <option value="5">★★★★★ (Excelente)</option>
+                    <option value="4">★★★★ (Muy Bueno)</option>
+                    <option value="3">★★★ (Bueno)</option>
+                </select>
+                <textarea class="form-input" placeholder="Escriba su reseña aquí..." style="height: 80px; resize: vertical;" required></textarea>
+                <button type="submit" class="btn-review">Enviar Reseña</button>
+            </form>
+        </div>
+        
+    </div>
+<script>
+        document.querySelector('.review-form form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue
+
+            // 1. Obtener los valores que escribió el usuario
+            const nombre = document.querySelectorAll('.form-input')[0].value;
+            const estrellasCantidad = document.querySelectorAll('.form-input')[1].value;
+            const resenaTexto = document.querySelectorAll('.form-input')[2].value;
+
+            // 2. Convertir el número seleccionado en caracteres de estrellas ★
+            let estrellasVisuales = '';
+            for (let i = 0; i < estrellasCantidad; i++) {
+                estrellasVisuales += '★';
+            }
+
+            // 3. Crear la estructura exacta de tu "testimonial-card"
+            const nuevaTarjeta = document.createElement('div');
+            nuevaTarjeta.className = 'testimonial-card';
+            nuevaTarjeta.innerHTML = `
+                <div class="stars">${estrellasVisuales}</div>
+                <p class="testimonial-text">"${resenaTexto}"</p>
+                <div class="testimonial-author">— ${nombre}</div>
+            `;
+
+            // 4. Insertar la nueva opinión justo arriba del formulario
+            const contenedorFormulario = document.querySelector('.review-form');
+            contenedorFormulario.parentNode.insertBefore(nuevaTarjeta, contenedorFormulario);
+
+            // 5. Limpiar el formulario para el siguiente comentario
+            this.reset();
+        });
+    </script>
 </body>
 </html>
