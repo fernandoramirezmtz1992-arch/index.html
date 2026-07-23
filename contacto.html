@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Consultoría Integral Empresarial</title>
     <style>
-        body { 
-            font-family: 'Arial', sans-serif; 
-            background-color: #f4f6f9; 
-            margin: 0; 
-            padding: 0; 
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
             color: #333;
         }
         .container {
-            max-width: 600px; 
-            margin: 50px auto; 
-            padding: 40px; 
-            background-color: #ffffff; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
-        h1 { 
-            color: #003366; 
+        h1 {
+            color: #003366;
             font-size: 28px;
             margin-bottom: 20px;
         }
@@ -43,13 +43,14 @@
             color: #003366;
             margin-bottom: 5px;
         }
-        input, textarea {
+        input, select, textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #e2e8f0;
             border-radius: 6px;
             box-sizing: border-box;
             font-family: inherit;
+            background-color: #fff;
         }
         textarea {
             resize: vertical;
@@ -87,30 +88,50 @@
 
     <div class="container">
         <h1>Póngase en Contacto</h1>
-        <p>Déjenos sus datos y un asesor se comunicará con usted a la brevedad para brindarle una solución a la medida.</p>
-        
-        <!-- Formulario básico -->
-        <form action="#" method="POST">
+        <p>Déjenos sus datos, seleccione el tema de su interés y un asesor se comunicará con usted a la brevedad.</p>
+
+        <!-- Formulario configurado con FormSubmit -->
+        <form action="https://formsubmit.co/fernandoramirez.mtz1992@gmail.com" method="POST">
+            
+            <!-- Configuración para evitar captcha molesto y ordenar la llegada del correo -->
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web - Consultoría">
+            <input type="hidden" name="_template" value="table">
+
             <div class="form-group">
                 <label for="nombre">Nombre Completo</label>
                 <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
             </div>
-            
+
             <div class="form-group">
                 <label for="correo">Correo Electrónico</label>
                 <input type="email" id="correo" name="correo" required placeholder="ejemplo@empresa.com">
             </div>
-            
+
+            <!-- Menú desplegable con los temas y servicios -->
             <div class="form-group">
-                <label for="mensaje">¿En qué podemos ayudarle?</label>
-                <textarea id="mensaje" name="mensaje" required placeholder="Escriba aquí su consulta o requerimiento..."></textarea>
+                <label for="servicio">Tema o Servicio Relacionado</label>
+                <select id="servicio" name="servicio_seleccionado" required>
+                    <option value="" disabled selected>Seleccione una opción...</option>
+                    <option value="Financiero - Impuestos">Financiero: Impuestos y Declaraciones</option>
+                    <option value="Financiero - Contabilidad">Financiero: Contabilidad General</option>
+                    <option value="Legal - Corporativo">Legal: Derecho Corporativo</option>
+                    <option value="Legal - Corporativo">Legal: Asesoria Ley Antilavado</option>
+                    <option value="Legal - Laboral">Legal: Asesoría Laboral</option>
+                    <option value="Cursos y Capacitación">Cursos y Capacitación Profesional</option>
+                    <option value="Otro">Otro tema / Consulta General</option>
+                </select>
             </div>
-            
+
+            <div class="form-group">
+                <label for="mensaje">Dudas más específicas o Comentarios</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Escriba aquí los detalles de su requerimiento..."></textarea>
+            </div>
+
             <button type="submit" class="btn-submit">Enviar Mensaje</button>
         </form>
 
-        <!-- Botón para regresar a la página principal -->
-        <a href="índice.html" class="back-link">← Volver al Inicio</a>
+        <!-- Botón para regresar -->
+        <a href="index.html" class="back-link">← Volver al Inicio</a>
     </div>
 
 </body>
