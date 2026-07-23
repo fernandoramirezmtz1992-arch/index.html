@@ -6,31 +6,34 @@
     <title>Contacto - Consultoría Integral Empresarial</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f6f9;
+            font-family: 'Georgia', serif; /* Tipografía más clásica y elegante */
+            background-color: #0b192c; /* Azul marino profundo Old Money */
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #f1f5f9;
         }
         .container {
             max-width: 600px;
             margin: 50px auto;
             padding: 40px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            background-color: #1e293b; /* Azul marino ligeramente más claro para el contenedor */
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid #d4af37; /* Borde sutil en tono dorado */
             text-align: center;
         }
         h1 {
-            color: #003366;
+            color: #d4af37; /* Dorado clásico */
             font-size: 28px;
             margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         p {
-            color: #555;
+            color: #cbd5e1;
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 30px;
+            font-family: 'Arial', sans-serif;
         }
         /* Estilos del Formulario */
         .form-group {
@@ -40,44 +43,57 @@
         label {
             display: block;
             font-weight: bold;
-            color: #003366;
+            color: #d4af37; /* Etiquetas en dorado */
             margin-bottom: 5px;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.5px;
         }
         input, select, textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
+            padding: 12px;
+            border: 1px solid #334155;
+            border-radius: 4px;
             box-sizing: border-box;
             font-family: inherit;
-            background-color: #fff;
+            background-color: #0f172a; /* Fondo oscuro para los campos */
+            color: #ffffff;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #d4af37; /* Se ilumina en dorado al hacer clic */
         }
         textarea {
             resize: vertical;
             height: 120px;
         }
-        /* Botón Dorado Elegante */
+        /* Botón Estilo Old Money (Dorado con transición elegante) */
         .btn-submit {
             background-color: #d4af37;
-            color: white;
-            padding: 12px 30px;
+            color: #0b192c; /* Texto marino oscuro sobre dorado */
+            padding: 14px 30px;
             border: none;
-            border-radius: 6px;
+            border-radius: 4px;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
             width: 100%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         .btn-submit:hover {
-            background-color: #aa8c2c;
+            background-color: #e6c55c;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
         .back-link {
             display: inline-block;
             margin-top: 25px;
-            color: #005b96;
+            color: #d4af37;
             text-decoration: none;
             font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
         }
         .back-link:hover {
             text-decoration: underline;
@@ -93,7 +109,7 @@
         <!-- Formulario configurado con FormSubmit -->
         <form action="https://formsubmit.co/fernandoramirez.mtz1992@gmail.com" method="POST">
             
-            <!-- Configuración para evitar captcha molesto y ordenar la llegada del correo -->
+            <!-- Configuración para evitar captcha y ordenar la llegada del correo -->
             <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web - Consultoría">
             <input type="hidden" name="_template" value="table">
 
@@ -115,7 +131,7 @@
                     <option value="Financiero - Impuestos">Financiero: Impuestos y Declaraciones</option>
                     <option value="Financiero - Contabilidad">Financiero: Contabilidad General</option>
                     <option value="Legal - Corporativo">Legal: Derecho Corporativo</option>
-                    <option value="Legal - Corporativo">Legal: Asesoria Ley Antilavado</option>
+                    <option value="Legal - Corporativo">Legal: Asesoría Ley Antilavado</option>
                     <option value="Legal - Laboral">Legal: Asesoría Laboral</option>
                     <option value="Cursos y Capacitación">Cursos y Capacitación Profesional</option>
                     <option value="Otro">Otro tema / Consulta General</option>
