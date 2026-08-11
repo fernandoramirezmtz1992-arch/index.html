@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Consultoría Integral Empresarial</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a0f08;
+            background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,0.05) 0px, transparent 1px), linear-gradient(90deg, #3d2314, #3d2314);
+            background-size: 30px 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #2d3748;
+        }
+        .card-container {
+            background-color: #fcfaf2;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border: 1px solid #c5a059;
+            text-align: center;
+            padding: 40px 30px;
+        }
+        .card-header h1 {
+            color: #002b49;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .card-header p {
+            color: #c5a059;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+        .divider {
+            height: 2px;
+            background-color: #e2e8f0;
+            margin: 20px 0;
+            width: 100%;
+        }
+        .contact-list {
+            list-style: none;
+            text-align: left;
+            margin: 25px 0;
+        }
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #4a5568;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .contact-item strong {
+            color: #002b49;
+            min-width: 80px;
+        }
+        .contact-item a {
+            color: #3182ce;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover {
+            color: #002b49;
+            text-decoration: underline;
+        }
+        .btn-action {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #c5a059;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.25);
+            transition: all 0.3s ease;
+        }
+        .btn-action:hover {
+            background-color: #aa8643;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(197, 160, 89, 0.4);
+        }
+        .btn-secondary {
+            background-color: #002b49;
+            box-shadow: 0 4px 10px rgba(0, 43, 73, 0.25);
+        }
+        .btn-secondary:hover {
+            background-color: #001a2c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card-header">
+            <h1>Consultoría Integral Empresarial</h1>
+            <p>CP. Fernando Ramírez Martínez</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <ul class="contact-list">
+            <li class="contact-item">
+                <strong>Teléfono:</strong>
+                <a href="tel:2281588278">[Tu Número Telefónico]</a>
+            </li>
+            <li class="contact-item">
+                <strong>fernandoramirez.mtz1992@gmail.com:</strong>
+                <a href="mailto:TU_CORREO">[tu-correo@empresa.com]</a>
+            </li>
+            <li class="contact-item">
+                <strong>Ubicación:</strong>
+                <span>[Ciudad, Estado / Dirección]</span>
+            </li>
+            <li class="contact-item">
+                <strong>Horario:</strong>
+                <span>Lunes a Viernes de 10:00 AM a 6:00 PM</span>
+            </li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <a href="tel:2281588078" class="btn-action">Llamar Ahora</a>
+        <a href="https://consultoresie.netlify.app/.html" class="btn-action btn-secondary">Ver Más Canales y Redes</a>
+    </div>
+
+</body>
+</html>
